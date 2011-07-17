@@ -21,8 +21,8 @@ position:relative;
 margin: 0 0 500px 0;
 }
 
-.titlepage h2.title {
-font-size:200%;
+h2.title { 
+font-size: 200%; 
 }
 
 h1.title {
