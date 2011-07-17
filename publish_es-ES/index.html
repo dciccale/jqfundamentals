@@ -122,22 +122,22 @@
           <ul>
             <li>
               <p>
-                Navegador web Firefox
+                <a href="http://www.mozilla.com/es-AR/firefox/" rel="_blank">Navegador web Firefox</a>
               </p>
             </li>
             <li>
               <p>
-                La extensi&oacute;n Firebug, para Firefox
+                La <a href="https://addons.mozilla.org/es-ES/firefox/addon/firebug/" rel="_blank">extensi&oacute;n Firebug</a>, para Firefox
               </p>
             </li>
             <li>
               <p>
-                Un editor de textos planos (como Notepad++ para Windows, gedit/Kate para Linux &oacute; TextMate para Mac OS X)
+                Un editor de textos planos (como <a href="http://notepad-plus-plus.org/download/v5.9.2.html" rel="_blank">Notepad++</a> para Windows, <a href="http://www.icewalkers.com/Linux/Software/56260/gEdit.html" rel="_blank">gedit</a>/<a href="http://linux.softpedia.com/get/Text-Editing-Processing/Others/Kate-2317.shtml" rel="_blank">Kate</a> para Linux &oacute; <a href="http://textmate.en.softonic.com/mac" rel="_blank">TextMate</a> para Mac OS X)
               </p>
             </li>
             <li>
               <p>
-                Para las secciones dedicadas a Ajax: Un servidor local (como WAMP o MAMP) &oacute; un cliente FTP/SSH para acceder a un servidor remoto.
+                Para las secciones dedicadas a Ajax: Un servidor local (como <a href="http://www.wampserver.com/en/download.php" rel="_blank">WAMP</a> o <a href="http://www.mamp.info/en/index.html" rel="_blank">MAMP</a>) &oacute; un cliente FTP/SSH (como <a href="http://filezilla-project.org/" rel="_blank">FileZilla</a>) para acceder a un servidor remoto.
               </p>
             </li>
           </ul>
@@ -180,7 +180,7 @@ console.log('hello');
             Depuraci&oacute;n del C&oacute;digo JavaScript
           </h2>
           <p>
-            La utilizaci&oacute;n de una herramienta de depuraci&oacute;n es esencial para trabajar con JavaScript. Firefox provee un depurador a trav&eacute;s de la extensi&oacute;n Firebug; mientras que Safari y Chrome ya traen uno integrado.
+            La utilizaci&oacute;n de una herramienta de depuraci&oacute;n es esencial para trabajar con JavaScript. Firefox provee un depurador a trav&eacute;s de la extensi&oacute;n Firebug; mientras que <a href="http://www.apple.com/es/safari/download/" rel="_blank">Safari</a> y <a href="http://www.google.es/chrome/" rel="_blank">Chrome</a> ya traen uno integrado.
           </p>
           <p>
             Cada depurador ofrece:
@@ -7252,6 +7252,7 @@ $('#remove').click(function(e) {
 		function makeLi(text, href) {
 			return '<li><a href="' + href + '">' + text + '</a></li>';
 		}
+		
 		$('div.chapter').each(function(i) {
 			var chapter = $(this),
 			chapterNumber = i + 1;
@@ -7277,6 +7278,11 @@ $('#remove').click(function(e) {
 		loe.append(loeItems);
 
 		SyntaxHighlighter.all();
+		
+		$('a[rel="_blank"]').click(function(e){
+			e.preventDefault();
+			window.open(this.href);
+		});
 	
 	});
 	</script>
