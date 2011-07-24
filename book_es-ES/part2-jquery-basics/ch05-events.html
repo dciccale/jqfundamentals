@@ -1,42 +1,34 @@
         <div id="capitulo-5" title="Eventos" class="chapter">
-          <div class="titlepage">
-            <div>
-              <div>
-                <h2 class="title">
-                  Eventos
-                </h2>
-              </div>
-            </div>
-          </div>
+			<h2 class="title">Eventos</h2>
           <div title="Overview" class="section">
-            <h2 class="title">
+            <h2>
               Introducci&oacute;n
             </h2>
             <p>
-              jQuery provee m&eacute;todos para asociar controladores de eventos (en ingl&eacute;s <span class="emphasis"><em>event handlers</em></span>) a selectores. Cuando un evento ocurre, la funci&oacute;n provista es ejecutada.
+              jQuery provee m&eacute;todos para asociar controladores de eventos (en ingl&eacute;s <em>event handlers</em>) a selectores. Cuando un evento ocurre, la funci&oacute;n provista es ejecutada.
             </p>
             <p>
               Dentro de la funci&oacute;n, la palabra clave this hace referencia al elemento en que el evento ocurre.
             </p>
             <p>
-              Para m&aacute;s detalles sobre los eventos en jQuery, puede consultar <a href="http://api.jquery.com/category/events/" class="ulink">http://api.jquery.com/category/events/</a>.
+              Para m&aacute;s detalles sobre los eventos en jQuery, puede consultar <a href="http://api.jquery.com/category/events/">http://api.jquery.com/category/events/</a>.
             </p>
             <p>
               La funci&oacute;n del controlador de eventos puede recibir un objeto. Este objeto puede ser utilizado para determinar la naturaleza del evento o, por ejemplo, prevenir el comportamiento predeterminado de &eacute;ste.
             </p>
             <p>
-              Para m&aacute;s detalles sobre el objeto del evento, visite <a href="http://api.jquery.com/category/events/event-object/" class="ulink">http://api.jquery.com/category/events/event-object/</a>.
+              Para m&aacute;s detalles sobre el objeto del evento, visite <a href="http://api.jquery.com/category/events/event-object/">http://api.jquery.com/category/events/event-object/</a>.
             </p>
           </div>
           <div title="Vincular Eventos a Elementos" class="section">
-            <h2 class="title">
+            <h2>
               Vincular Eventos a Elementos
             </h2>
             <p>
-              jQuery ofrece m&eacute;todos para la mayor&iacute;a de los eventos &mdash; entre ellos <code class="code">$.fn.click</code>, <code
+              jQuery ofrece m&eacute;todos para la mayor&iacute;a de los eventos &mdash; entre ellos <code>$.fn.click</code>, <code
               class="code">$.fn.focus</code>, <code
               class="code">$.fn.blur</code>, <code
-              class="code">$.fn.change</code>, etc. Estos &uacute;ltimos son formas reducidas del m&eacute;todo <code class="code">$.fn.bind</code> de jQuery. El m&eacute;todo bind es &uacute;til para vincular (en ingl&eacute;s <span class="emphasis"><em>binding</em></span>) la misma funci&oacute;n de controlador a m&uacute;ltiples eventos, para cuando se desea proveer informaci&oacute;n al controlador de evento, cuando se est&aacute; trabajando con eventos personalizados &oacute; cuando se desea pasar un objeto a m&uacute;ltiples eventos y controladores.
+              class="code">$.fn.change</code>, etc. Estos &uacute;ltimos son formas reducidas del m&eacute;todo <code>$.fn.bind</code> de jQuery. El m&eacute;todo bind es &uacute;til para vincular (en ingl&eacute;s <em>binding</em>) la misma funci&oacute;n de controlador a m&uacute;ltiples eventos, para cuando se desea proveer informaci&oacute;n al controlador de evento, cuando se est&aacute; trabajando con eventos personalizados &oacute; cuando se desea pasar un objeto a m&uacute;ltiples eventos y controladores.
             </p>
             <div class="example">
               <p class="title">
@@ -52,7 +44,7 @@ $('p').click(function() {
             </div>
             <div class="example">
               <p class="title">
-                <b>Vincular un evento utilizando el m&eacute;todo <code class="code">$.fn.bind</code> method</b>
+                <b>Vincular un evento utilizando el m&eacute;todo <code>$.fn.bind</code> method</b>
               </p>
               <div class="example-contents">
                 <pre class="brush: js">
@@ -64,7 +56,7 @@ $('p').bind('click', function() {
             </div>
             <div class="example">
               <p class="title">
-                <b>Vincular un evento utilizando el m&eacute;todo <code class="code">$.fn.bind</code> con informaci&oacute;n asociada</b>
+                <b>Vincular un evento utilizando el m&eacute;todo <code>$.fn.bind</code> con informaci&oacute;n asociada</b>
               </p>
               <div class="example-contents">
                 <pre class="brush: js">
@@ -81,17 +73,15 @@ $('input').bind(
               </div>
             </div>
             <div title="Vincular Eventos para Ejecutar una vez" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Vincular Eventos para Ejecutar una vez
                 </h3>
-              </div>
               <p>
-                A veces puede necesitar que un controlador particular se ejecute solo una vez &mdash; y despu&eacute;s de eso, necesite que ninguno m&aacute;s se ejecute, o que se ejecute otro diferente. Para este prop&oacute;sito jQuery provee el m&eacute;todo <code class="code">$.fn.one</code>.
+                A veces puede necesitar que un controlador particular se ejecute solo una vez &mdash; y despu&eacute;s de eso, necesite que ninguno m&aacute;s se ejecute, o que se ejecute otro diferente. Para este prop&oacute;sito jQuery provee el m&eacute;todo <code>$.fn.one</code>.
               </p>
               <div class="example">
                 <p class="title">
-                  <b>Cambiar controladores utilizando el m&eacute;todo <code class="code">$.fn.one</code></b>
+                  <b>Cambiar controladores utilizando el m&eacute;todo <code>$.fn.one</code></b>
                 </p>
                 <div class="example-contents">
                   <pre class="brush: js">
@@ -103,17 +93,15 @@ $('p').one('click', function() {
                 </div>
               </div>
               <p>
-                El m&eacute;todo <code class="code">$.fn.one</code> es &uacute;til para situaciones en que necesita ejecutar cierto c&oacute;digo la primera vez que ocurre un evento en un elemento, pero no en los eventos sucesivos.
+                El m&eacute;todo <code>$.fn.one</code> es &uacute;til para situaciones en que necesita ejecutar cierto c&oacute;digo la primera vez que ocurre un evento en un elemento, pero no en los eventos sucesivos.
               </p>
             </div>
             <div title="Desvincular Eventos" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Desvincular Eventos
                 </h3>
-              </div>
               <p>
-                Para desvincular (en ingles <span class="emphasis"><em>unbind</em></span>) un controlador de evento, puede utilizar el m&eacute;todo <code class="code">$.fn.unbind</code> pas&aacute;ndole el tipo de evento a desconectar. Si se pas&oacute; como adjunto al evento una funci&oacute;n nombrada, es posible aislar la desconexi&oacute;n de dicha funci&oacute;n pas&aacute;ndola como segundo argumento.
+                Para desvincular (en ingles <em>unbind</em>) un controlador de evento, puede utilizar el m&eacute;todo <code>$.fn.unbind</code> pas&aacute;ndole el tipo de evento a desconectar. Si se pas&oacute; como adjunto al evento una funci&oacute;n nombrada, es posible aislar la desconexi&oacute;n de dicha funci&oacute;n pas&aacute;ndola como segundo argumento.
               </p>
               <div class="example">
                 <p class="title">
@@ -141,11 +129,9 @@ $('p').unbind('click', bar); // foo esta atado a&uacute;n al evento click
               </div>
             </div>
             <div title="Espacios de Nombres para Eventos" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Espacios de Nombres para Eventos
                 </h3>
-              </div>
               <p>
                 Cuando se esta desarrollando aplicaciones complejas o extensiones de jQuery, puede ser &uacute;til utilizar espacios de nombres para los eventos, y de esta forma evitar que se desvinculen eventos cuando no lo desea.
               </p>
@@ -164,13 +150,11 @@ $('p').unbind('.myNamespace'); // desvincula todos los eventos con el espacio de
             </div>
           </div>
 		  <div title="Vinculaci&oacute;n de M&uacute;ltiples Eventos" class="section">
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 Vinculaci&oacute;n de M&uacute;ltiples Eventos
               </h3>
-            </div>
             <p>
-              Muy a menudo, elementos en una aplicaci&oacute;n estar&aacute;n vinculados a m&uacute;ltiples eventos, cada uno con una funci&oacute;n diferente. En estos casos, es posible pasar un objeto dentro de <code class="code">$.fn.bind</code> con uno o m&aacute;s pares de nombres claves/valores. Cada nombre clave ser&aacute; el nombre del evento mientras que cada valor ser&aacute; la funci&oacute;n a ejecutar cuando ocurra el evento.
+              Muy a menudo, elementos en una aplicaci&oacute;n estar&aacute;n vinculados a m&uacute;ltiples eventos, cada uno con una funci&oacute;n diferente. En estos casos, es posible pasar un objeto dentro de <code>$.fn.bind</code> con uno o m&aacute;s pares de nombres claves/valores. Cada nombre clave ser&aacute; el nombre del evento mientras que cada valor ser&aacute; la funci&oacute;n a ejecutar cuando ocurra el evento.
             </p>
             <div class="example">
               <p class="title">
@@ -187,19 +171,19 @@ $('p').bind({
             </div>
           </div>
 					<div class="note">
-          <h3 class="title">
+          <h3>
             Nota
           </h3>
           <p>
-            La opci&oacute;n de pasar un objeto con m&uacute;ltiples eventos y funciones a <code class="code">$.fn.bind</code> fue introducido en jQuery 1.4.4.
+            La opci&oacute;n de pasar un objeto con m&uacute;ltiples eventos y funciones a <code>$.fn.bind</code> fue introducido en jQuery 1.4.4.
           </p>
           </div>
           <div title="El Objeto del Evento" class="section">
-            <h2 class="title">
+            <h2>
               El Objeto del Evento
             </h2>
             <p>
-              Como se menciona en la introducci&oacute;n, la funci&oacute;n controladora de eventos recibe un objeto del evento, el cual contiene varios m&eacute;todos y propiedades. El objeto es com&uacute;nmente utilizado para prevenir la acci&oacute;n predeterminada del evento a trav&eacute;s del m&eacute;todo <span class="emphasis"><em>preventDefault</em></span>. Sin embargo, tambi&eacute;n contiene varias propiedades y m&eacute;todos &uacute;tiles:
+              Como se menciona en la introducci&oacute;n, la funci&oacute;n controladora de eventos recibe un objeto del evento, el cual contiene varios m&eacute;todos y propiedades. El objeto es com&uacute;nmente utilizado para prevenir la acci&oacute;n predeterminada del evento a trav&eacute;s del m&eacute;todo <em>preventDefault</em>. Sin embargo, tambi&eacute;n contiene varias propiedades y m&eacute;todos &uacute;tiles:
             </p>
             <div class="variablelist">
               <dl>
@@ -262,7 +246,7 @@ $('p').bind({
               </dl>
             </div>
             <p>
-              Por otro lado, la funci&oacute;n controladora tambi&eacute;n tiene acceso al elemento DOM que inicializ&oacute; el evento a trav&eacute;s de la palabra clave <code class="code">this</code>. Para convertir a dicho elemento DOM en un objeto jQuery (y poder utilizar los m&eacute;todos de la biblioteca) es necesario escribir <code class="code">$(this)</code>, como se muestra a continuaci&oacute;n:
+              Por otro lado, la funci&oacute;n controladora tambi&eacute;n tiene acceso al elemento DOM que inicializ&oacute; el evento a trav&eacute;s de la palabra clave <code>this</code>. Para convertir a dicho elemento DOM en un objeto jQuery (y poder utilizar los m&eacute;todos de la biblioteca) es necesario escribir <code>$(this)</code>, como se muestra a continuaci&oacute;n:
             </p>
             <pre class="brush: js">
 var $this = $(this);
@@ -285,11 +269,11 @@ $('a').click(function(e) {
             </div>
           </div>
           <div title="Ejecuci&oacute;n autom&aacute;tica de Controladores de Eventos" class="section">
-            <h2 class="title">
+            <h2>
               Ejecuci&oacute;n autom&aacute;tica de Controladores de Eventos
             </h2>
             <p>
-              A trav&eacute;s del m&eacute;todo <code class="code">$.fn.trigger</code>, jQuery provee una manera de disparar controladores de eventos sobre alg&uacute;n elemento sin requerir la acci&oacute;n del usuario. Si bien este m&eacute;todo tiene sus usos, no deber&iacute;a ser utilizado para simplemente llamar a una funci&oacute;n que pueda ser ejecutada con un click del usuario. En su lugar, deber&iacute;a guardar la funci&oacute;n que se necesita llamar en una variable, y luego pasar el nombre de la variable cuando realiza el vinculo (<span class="emphasis"><em>binding</em></span>). De esta forma, podr&aacute; llamar a la funci&oacute;n cuando lo desee en lugar de ejecutar <code class="code">$.fn.trigger</code>.
+              A trav&eacute;s del m&eacute;todo <code>$.fn.trigger</code>, jQuery provee una manera de disparar controladores de eventos sobre alg&uacute;n elemento sin requerir la acci&oacute;n del usuario. Si bien este m&eacute;todo tiene sus usos, no deber&iacute;a ser utilizado para simplemente llamar a una funci&oacute;n que pueda ser ejecutada con un click del usuario. En su lugar, deber&iacute;a guardar la funci&oacute;n que se necesita llamar en una variable, y luego pasar el nombre de la variable cuando realiza el vinculo (<em>binding</em>). De esta forma, podr&aacute; llamar a la funci&oacute;n cuando lo desee en lugar de ejecutar <code>$.fn.trigger</code>.
             </p>
             <div class="example">
               <p class="title">
@@ -313,26 +297,26 @@ foo(); // en lugar de realizar $('p').trigger('click')
               </div>
             </div>
           </div>
-          <h2 class="title">
+          <h2>
             Incrementar el Rendimiento con la Delegaci&oacute;n de Eventos
           </h2>
           <p>
-            Cuando trabaje con jQuery, frecuentemente a&ntilde;adir&aacute; nuevos elementos a la p&aacute;gina, y cuando lo haga, necesitar&aacute; vincular eventos a dichos elementos &mdash; eventos que ya estaban vinculados a elementos en la p&aacute;gina. En lugar de repetir la tarea cada vez que se a&ntilde;ade un elemento, es posible utilizar la delegaci&oacute;n de eventos para hacerlo. Con ella, podr&aacute; enlazar un evento a un elemento contenedor, y luego, cuando el evento ocurra, podr&aacute; ver en que elemento sucede. Si todo esto suena complicado, afortunadamente jQuery lo hace f&aacute;cil a trav&eacute;s de los m&eacute;todos <code class="code">$.fn.live</code> y <code class="code">$.fn.delegate</code>.
+            Cuando trabaje con jQuery, frecuentemente a&ntilde;adir&aacute; nuevos elementos a la p&aacute;gina, y cuando lo haga, necesitar&aacute; vincular eventos a dichos elementos &mdash; eventos que ya estaban vinculados a elementos en la p&aacute;gina. En lugar de repetir la tarea cada vez que se a&ntilde;ade un elemento, es posible utilizar la delegaci&oacute;n de eventos para hacerlo. Con ella, podr&aacute; enlazar un evento a un elemento contenedor, y luego, cuando el evento ocurra, podr&aacute; ver en que elemento sucede. Si todo esto suena complicado, afortunadamente jQuery lo hace f&aacute;cil a trav&eacute;s de los m&eacute;todos <code>$.fn.live</code> y <code>$.fn.delegate</code>.
           </p>
           <p>
             La delegaci&oacute;n de eventos posee algunos beneficios, incluso si no se tiene pensando a&ntilde;adir m&aacute;s elementos a la p&aacute;gina. El tiempo requerido para enlazar controladores de eventos a cientos de elementos no es un trabajo trivial; si posee un gran conjunto de elementos, deber&iacute;a considerar utilizar la delegaci&oacute;n de eventos a un elemento contenedor.
           </p>
           <div class="note">
-          <h3 class="title">
+          <h3>
             Nota
           </h3>
           <p>
-            El m&eacute;todo <code class="code">$.fn.live</code> fue introducido a partir de la versi&oacute;n 1.3 de la biblioteca y en ese momento, solo ciertos tipos de eventos eran soportados. A partir de la versi&oacute;n 1.4.2, se introdujo <code class="code">$.fn.delegate</code> el cual es preferido a $.fn.live .
+            El m&eacute;todo <code>$.fn.live</code> fue introducido a partir de la versi&oacute;n 1.3 de la biblioteca y en ese momento, solo ciertos tipos de eventos eran soportados. A partir de la versi&oacute;n 1.4.2, se introdujo <code>$.fn.delegate</code> el cual es preferido a $.fn.live .
           </p>
           </div>
           <div class="example">
             <p class="title">
-              <b>Delegar un evento utilizando <code class="code">$.fn.delegate</code></b>
+              <b>Delegar un evento utilizando <code>$.fn.delegate</code></b>
             </p>
             <div class="example-contents">
               <pre class="brush: js">
@@ -345,7 +329,7 @@ $('#myUnorderedList').delegate('li', 'click', function(e) {
           </div>
           <div class="example">
             <p class="title">
-              <b>Delegar un Evento utilizando <code class="code">$.fn.live</code></b>
+              <b>Delegar un Evento utilizando <code>$.fn.live</code></b>
             </p>
             <div class="example-contents">
               <pre class="brush: js">
@@ -357,13 +341,11 @@ $('#myUnorderedList li').live('click', function(e) {
             </div>
           </div>
           <div title="Desvincular Eventos Delegados" class="section">
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 Desvincular Eventos Delegados
               </h3>
-            </div>
             <p>
-              Si necesita remover eventos delegados, no puede hacerlo simplemente desvincul&aacute;ndolos. Para eso, utilice el m&eacute;todo <code class="code">$.fn.undelegate</code> para eventos conectados con <code class="code">$.fn.delegate</code>, y <code class="code">$.fn.die</code> para eventos conectados con <code class="code">$.fn.live</code>. Al igual que cuando se realiza un vinculo, opcionalmente, se puede pasar el nombre de una funci&oacute;n vinculada.
+              Si necesita remover eventos delegados, no puede hacerlo simplemente desvincul&aacute;ndolos. Para eso, utilice el m&eacute;todo <code>$.fn.undelegate</code> para eventos conectados con <code>$.fn.delegate</code>, y <code>$.fn.die</code> para eventos conectados con <code>$.fn.live</code>. Al igual que cuando se realiza un vinculo, opcionalmente, se puede pasar el nombre de una funci&oacute;n vinculada.
             </p>
             <div class="example">
               <p class="title">
@@ -378,22 +360,20 @@ $('#myUnorderedList li').die('click');
             </div>
           </div>
           <div title="Funciones Auxiliares de Eventos" class="section">
-            <h2 class="title">
+            <h2>
               Funciones Auxiliares de Eventos
             </h2>
             <p>
               jQuery ofrece dos funciones auxiliares para el trabajo con eventos:
             </p>
-            <div class="titlepage">
-              <h3 class="title">
-                <code class="code">$.fn.hover</code>
+              <h3>
+                <code>$.fn.hover</code>
               </h3>
-            </div>
             <p>
-              El m&eacute;todo <code class="code">$.fn.hover</code> permite pasar una o dos funciones que se ejecutar&aacute;n cuando los eventos <code class="code">mouseenter</code> y <code class="code">mouseleave</code> ocurran en el elemento seleccionado. Si se pasa una sola funci&oacute;n, est&aacute; ser&aacute; ejecutada en ambos eventos; en cambio si se pasan dos, la primera ser&aacute; ejecutada cuando ocurra el evento <code class="code">mouseenter</code>, mientras que la segunda ser&aacute; ejecutada cuando ocurra <code class="code">mouseleave</code>.
+              El m&eacute;todo <code>$.fn.hover</code> permite pasar una o dos funciones que se ejecutar&aacute;n cuando los eventos <code>mouseenter</code> y <code>mouseleave</code> ocurran en el elemento seleccionado. Si se pasa una sola funci&oacute;n, est&aacute; ser&aacute; ejecutada en ambos eventos; en cambio si se pasan dos, la primera ser&aacute; ejecutada cuando ocurra el evento <code>mouseenter</code>, mientras que la segunda ser&aacute; ejecutada cuando ocurra <code>mouseleave</code>.
             </p>
             <div class="note">
-            <h3 class="title">
+            <h3>
               Nota
             </h3>
             <p>
@@ -413,13 +393,11 @@ $('#menu li').hover(function() {
               </div>
             </div>
             <div title="$.fn.toggle" class="section">
-              <div class="titlepage">
-                <h3 class="title">
-                  <code class="code">$.fn.toggle</code>
+                <h3>
+                  <code>$.fn.toggle</code>
                 </h3>
-              </div>
               <p>
-                Al igual que el m&eacute;todo anterior, <code class="code">$.fn.toggle</code> recibe dos o m&aacute;s funciones; cada vez que un evento ocurre, la funci&oacute;n siguiente en la lista se ejecutar&aacute;. Generalmente, <code class="code">$.fn.toggle</code> es utilizada con solo dos funciones. En caso que utiliza m&aacute;s de dos funciones, tenga cuidado, ya que puede ser dificultar la depuraci&oacute;n del c&oacute;digo.
+                Al igual que el m&eacute;todo anterior, <code>$.fn.toggle</code> recibe dos o m&aacute;s funciones; cada vez que un evento ocurre, la funci&oacute;n siguiente en la lista se ejecutar&aacute;. Generalmente, <code>$.fn.toggle</code> es utilizada con solo dos funciones. En caso que utiliza m&aacute;s de dos funciones, tenga cuidado, ya que puede ser dificultar la depuraci&oacute;n del c&oacute;digo.
               </p>
               <div class="example">
                 <p class="title">
@@ -441,43 +419,41 @@ $('p.expander').toggle(
             </div>
           </div>
           <div title="Ejercicios" class="section">
-            <h2 class="title">
+            <h2>
               Ejercicios
             </h2>
             <div title="Crear una 'Sugerencia' para una Caja de Ingreso de Texto" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Crear una "Sugerencia" para una Caja de Ingreso de Texto
                 </h3>
-              </div>
               <p>
-                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/inputHint.js</code> &oacute; trabaje directamente con Firebug. La tarea a realizar es utilizar el texto del elemento label y aplicar una "sugerencia" en la caja de ingreso de texto. Los pasos ha seguir son los siguientes:
+                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/inputHint.js</code> &oacute; trabaje directamente con Firebug. La tarea a realizar es utilizar el texto del elemento label y aplicar una "sugerencia" en la caja de ingreso de texto. Los pasos ha seguir son los siguientes:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
                   <li>
                     <p>
-                      Establecer el valor del elemento <span class="emphasis"><em>input</em></span> igual al valor del elemento <span class="emphasis"><em>label</em></span>;
+                      Establecer el valor del elemento <em>input</em> igual al valor del elemento <em>label</em>;
                     </p>
                   </li>
                   <li>
                     <p>
-                      &ntilde;adir la clase "hint" al elemento <span class="emphasis"><em>input</em></span>;
+                      A&ntilde;adir la clase "hint" al elemento <em>input</em>;
                     </p>
                   </li>
                   <li>
                     <p>
-                      Remover el elemento <span class="emphasis"><em>label</em></span>;
+                      Remover el elemento <em>label</em>;
                     </p>
                   </li>
                   <li>
                     <p>
-                      Vincular un evento <span class="emphasis"><em>focus</em></span> en el <span class="emphasis"><em>input</em></span> para remover el texto de sugerencia y la clase "hint";
+                      Vincular un evento <em>focus</em> en el <em>input</em> para remover el texto de sugerencia y la clase "hint";
                     </p>
                   </li>
                   <li>
                     <p>
-                      Vincular un evento <span class="emphasis"><em>blur</em></span> en el <span class="emphasis"><em>input</em></span> para restaurar el texto de sugerencia y la clase "hint" en caso que no se haya ingresado alg&uacute;n texto.
+                      Vincular un evento <em>blur</em> en el <em>input</em> para restaurar el texto de sugerencia y la clase "hint" en caso que no se haya ingresado alg&uacute;n texto.
                     </p>
                   </li>
                 </ol>
@@ -487,36 +463,34 @@ $('p.expander').toggle(
               </p>
             </div>
             <div title="A&ntilde;adir una Navegaci&oacute;n por Pesta&ntilde;as" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   A&ntilde;adir una Navegaci&oacute;n por Pesta&ntilde;as
                 </h3>
-              </div>
               <p>
-                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/tabs.js</code> &oacute; trabaje directamente con Firebug. La tarea a realizar es crear una navegaci&oacute;n por pesta&ntilde;as para los dos elementos <span class="emphasis"><em>div.module</em></span>. Los pasos ha seguir son los siguientes:
+                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/tabs.js</code> &oacute; trabaje directamente con Firebug. La tarea a realizar es crear una navegaci&oacute;n por pesta&ntilde;as para los dos elementos <em>div.module</em>. Los pasos ha seguir son los siguientes:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
                   <li>
                     <p>
-                      Ocultar todos los elementos <span class="emphasis"><em>div.module</em></span>;
+                      Ocultar todos los elementos <em>div.module</em>;
                     </p>
                   </li>
                   <li>
                     <p>
-                      Crear una lista desordenada antes del primer <span class="emphasis"><em>div.module</em></span> para utilizar como pesta&ntilde;as;
+                      Crear una lista desordenada antes del primer <em>div.module</em> para utilizar como pesta&ntilde;as;
                     </p>
                   </li>
-                  <li>Interactuar con cada div utilizando <code class="code">$.fn.each</code>. Por cada uno, utilizar el texto del elemento <span class="emphasis"><em>h2</em></span> como el texto para el &iacute;tem de la lista desordenada;
+                  <li>Interactuar con cada div utilizando <code>$.fn.each</code>. Por cada uno, utilizar el texto del elemento <em>h2</em> como el texto para el &iacute;tem de la lista desordenada;
                   </li>
                   <li>
                     <p>
-                      Vincular un evento <span class="emphasis"><em>click</em></span> a cada &iacute;tem de la lista de forma que:
+                      Vincular un evento <em>click</em> a cada &iacute;tem de la lista de forma que:
                     </p>
                     <ul>
                       <li>
                         <p>
-                          Muestre el <span class="emphasis"><em>div</em></span> correspondiente y oculte el otro;
+                          Muestre el <em>div</em> correspondiente y oculte el otro;
                         </p>
                       </li>
                       <li>

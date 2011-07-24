@@ -1,62 +1,50 @@
         <div id="capitulo-7" title="Ajax" class="chapter">
-          <div class="titlepage">
-            <div>
-              <div>
-                <h2 class="title">
-                  Ajax
-                </h2>
-              </div>
-            </div>
-          </div>
+			<h2 class="title">Ajax</h2>
           <div title="Introducci&oacute;n" class="section">
-            <h2 class="title">
+            <h2>
               Introducci&oacute;n
             </h2>
             <p>
-              El m&eacute;todo <span class="emphasis"><em>XMLHttpRequest</em></span> (XHR) permite a los navegadores comunicarse con el servidor sin la necesidad de recargar la p&aacute;gina. Este m&eacute;todo, tambi&eacute;n conocido como Ajax (JavaScript as&iacute;ncrono y XML, en ingl&eacute;s <span class="emphasis"><em>Asynchronous JavaScript and XML</em></span>), permite la creaci&oacute;n de aplicaciones ricas en interactividad.
+              El m&eacute;todo <em>XMLHttpRequest</em> (XHR) permite a los navegadores comunicarse con el servidor sin la necesidad de recargar la p&aacute;gina. Este m&eacute;todo, tambi&eacute;n conocido como Ajax (JavaScript as&iacute;ncrono y XML, en ingl&eacute;s <em>Asynchronous JavaScript and XML</em>), permite la creaci&oacute;n de aplicaciones ricas en interactividad.
             </p>
             <p>
               Las peticiones Ajax son ejecutadas por el c&oacute;digo JavaScript, el cual env&iacute;a una petici&oacute;n a una URL y cuando recibe una respuesta, una funci&oacute;n de devoluci&oacute;n puede ser ejecutada la cual recibe como argumento la respuesta del servidor y realiza algo con ella. Debido a que la respuesta es as&iacute;ncrona, el resto del c&oacute;digo de la aplicaci&oacute;n continua ejecut&aacute;ndose, por lo cual, es imperativo que una funci&oacute;n de devoluci&oacute;n sea ejecutada para manejar la respuesta.
             </p>
             <p>
-              A trav&eacute;s de varios m&eacute;todos, jQuery provee soporte para Ajax, permitiendo abstraer las diferencias que pueden existir entre navegadores. Los m&eacute;todos en cuesti&oacute;n son <code class="code">$.get()</code>, <code class="code">$.getScript()</code>, <code class="code">$.getJSON()</code>, <code class="code">$.post()</code> y <code class="code">$().load()</code>.
+              A trav&eacute;s de varios m&eacute;todos, jQuery provee soporte para Ajax, permitiendo abstraer las diferencias que pueden existir entre navegadores. Los m&eacute;todos en cuesti&oacute;n son <code>$.get()</code>, <code>$.getScript()</code>, <code>$.getJSON()</code>, <code>$.post()</code> y <code>$().load()</code>.
             </p>
             <p>
-              A pesar que la definici&oacute;n de Ajax posee la palabra "XML", la mayor&iacute;a de las aplicaciones no utilizan dicho formato para el transporte de datos, sino que en su lugar se utiliza HTML plano o informaci&oacute;n en formato JSON (<span class="emphasis"><em>JavaScript Object Notation</em></span>).
+              A pesar que la definici&oacute;n de Ajax posee la palabra "XML", la mayor&iacute;a de las aplicaciones no utilizan dicho formato para el transporte de datos, sino que en su lugar se utiliza HTML plano o informaci&oacute;n en formato JSON (<em>JavaScript Object Notation</em>).
             </p>
             <p>
-              En general, Ajax no trabaja a trav&eacute;s de dominios diferentes. Sin embargo, existen excepciones, como los servicios que proveen informaci&oacute;n en formato JSONP (<span class="emphasis"><em>JSON with Padding</em></span>), los cuales permiten una funcionalidad limitada a trav&eacute;s de diferentes dominios.
+              En general, Ajax no trabaja a trav&eacute;s de dominios diferentes. Sin embargo, existen excepciones, como los servicios que proveen informaci&oacute;n en formato JSONP (<em>JSON with Padding</em>), los cuales permiten una funcionalidad limitada a trav&eacute;s de diferentes dominios.
             </p>
           </div>
-          <div title="Conceptos Claves" class="section">
-            <h2 class="title">
-              Conceptos Claves
+          <div title="Conceptos Clave" class="section">
+            <h2>
+              Conceptos Clave
             </h2>
             <p>
-              La utilizaci&oacute;n correcta de los m&eacute;todos Ajax requiere primero la comprensi&oacute;n de algunos conceptos claves.
+              La utilizaci&oacute;n correcta de los m&eacute;todos Ajax requiere primero la comprensi&oacute;n de algunos conceptos clave.
             </p>
             <div title="GET vs. POST" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   GET vs. POST
                 </h3>
-              </div>
               <p>
                 Los dos m&eacute;todos HTTP m&aacute;s comunes para enviar una petici&oacute;n a un servidor son GET y POST. Es importante entender la utilizaci&oacute;n de cada uno.
               </p>
               <p>
-                El m&eacute;todo GET debe ser utilizado para operaciones no-destructivas — es decir, operaciones en donde se esta "obteniendo" datos del servidor, pero no modificando. Por ejemplo, una consulta a un servicio de b&uacute;squeda podr&iacute;a ser una petici&oacute;n GET. Por otro lado, las solicitudes GET pueden ser almacenadas en la cache del navegador, pudiendo conducir a un comportamiento impredecible si no se lo espera. Generalmente, la informaci&oacute;n enviada al servidor, es enviada en una cadena de datos (en ingl&eacute;s <span class="emphasis"><em>query string</em></span>).
+                El m&eacute;todo GET debe ser utilizado para operaciones no-destructivas — es decir, operaciones en donde se esta "obteniendo" datos del servidor, pero no modificando. Por ejemplo, una consulta a un servicio de b&uacute;squeda podr&iacute;a ser una petici&oacute;n GET. Por otro lado, las solicitudes GET pueden ser almacenadas en la cache del navegador, pudiendo conducir a un comportamiento impredecible si no se lo espera. Generalmente, la informaci&oacute;n enviada al servidor, es enviada en una cadena de datos (en ingl&eacute;s <em>query string</em>).
               </p>
               <p>
-                El m&eacute;todo POST debe ser utilizado para operaciones destructivas — es decir, operaciones en donde se est&aacute; incorporando informaci&oacute;n al servidor. Por ejemplo, cuando un usuario guarda un art&iacute;culo en un blog, esta acci&oacute;n deber&iacute;a utilizar POST. Por otro lado, este tipo de m&eacute;todo no es guardado en la cache del navegador. Adem&aacute;s, una cadena de consulta puede ser parte de la URL, pero la informaci&oacute;n tiende ser enviada de forma separada.
+                El m&eacute;todo POST debe ser utilizado para operaciones destructivas — es decir, operaciones en donde se est&aacute; incorporando informaci&oacute;n al servidor. Por ejemplo, cuando un usuario guarda un art&iacute;culo en un blog, esta acci&oacute;n deber&iacute;a utilizar POST. Por otro lado, este tipo de m&eacute;todo no se guarda en la cache del navegador. Adem&aacute;s, una cadena de consulta puede ser parte de la URL, pero la informaci&oacute;n tiende a ser enviada de forma separada.
               </p>
             </div>
             <div title="Tipos de Datos" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Tipos de Datos
                 </h3>
-              </div>
               <p>
                 Generalmente, jQuery necesita algunas instrucciones sobre el tipo de informaci&oacute;n que se espera recibir cuando se realiza una petici&oacute;n Ajax. En algunos casos, el tipo de dato es especificado por el nombre del m&eacute;todo, pero en otros casos se lo debe detallar como parte de la configuraci&oacute;n del m&eacute;todo:
               </p>
@@ -83,7 +71,7 @@
                   </dt>
                   <dd>
                     <p>
-                      Para a&ntilde;adir un nuevo <span class="emphasis"><em>script</em></span> con c&oacute;digo JavaScript a la p&aacute;gina.
+                      Para a&ntilde;adir un nuevo <em>script</em> con c&oacute;digo JavaScript a la p&aacute;gina.
                     </p>
                   </dd>
                   <dt>
@@ -94,11 +82,11 @@
                       Para transportar informaci&oacute;n en formato JSON, el cual puede incluir cadenas de caracteres, arreglos y objetos.
                     </p>
                     <div class="note">
-                    <h3 class="title">
+                    <h3>
                       Nota
                     </h3>
                     <p>
-                      A partir de la versi&oacute;n 1.4 de la biblioteca, si la informaci&oacute;n JSON no est&aacute; correctamente formateada, la petici&oacute;n podr&iacute;a fallar. Visite <a href="http://json.org" class="ulink">http://json.org</a> para obtener detalles sobre un correcto formateo de datos en JSON.
+                      A partir de la versi&oacute;n 1.4 de la biblioteca, si la informaci&oacute;n JSON no est&aacute; correctamente formateada, la petici&oacute;n podr&iacute;a fallar. Visite <a href="http://json.org">http://json.org</a> para obtener detalles sobre un correcto formateo de datos en JSON.
                     </p>
                     <p>
                       Es recomendable utilizar los mecanismos que posea el lenguaje del lado de servidor para la generaci&oacute;n de informaci&oacute;n en JSON.
@@ -128,11 +116,9 @@
               </p>
             </div>
             <div title="Asincronismo" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Asincronismo
                 </h3>
-              </div>
               <p>
                 Debido a que, de forma predeterminada, las llamadas Ajax son as&iacute;ncronas, la respuesta del servidor no esta disponible de forma inmediata. Por ejemplo, el siguiente c&oacute;digo no deber&iacute;a funcionar:
               </p>
@@ -149,46 +135,40 @@ $.get('foo.php', function(response) { console.log(response); });
 </pre>
             </div>
             <div title="Pol&iacute;ticas de Mismo Origen y JSONP" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Pol&iacute;ticas de Mismo Origen y JSONP
                 </h3>
-              </div>
               <p>
-                En general, las peticiones Ajax est&aacute;n limitadas a utilizar el mismo protocolo (<span class="emphasis"><em>http</em></span> o <span class="emphasis"><em>https</em></span>), el mismo puerto y el mismo dominio de origen. Esta limitaci&oacute;n no se aplica a los scripts cargados a trav&eacute;s del m&eacute;todo Ajax de jQuery.
+                En general, las peticiones Ajax est&aacute;n limitadas a utilizar el mismo protocolo (<em>http</em> o <em>https</em>), el mismo puerto y el mismo dominio de origen. Esta limitaci&oacute;n no se aplica a los scripts cargados a trav&eacute;s del m&eacute;todo Ajax de jQuery.
               </p>
               <p>
-                La otra excepci&oacute;n es cuando se hace una petici&oacute;n que recibir&aacute; una respuesta en formato JSONP. En este caso, el proveedor de la respuesta debe responder la petici&oacute;n con un <code class="code">script</code> que puede ser cargado utilizando la etiqueta <code class="code">&lt;script&gt;</code>, evitando as&iacute; la limitaci&oacute;n de realizar peticiones desde el mismo dominio. Dicha respuesta contendr&aacute; la informaci&oacute;n solicitada, contenida en una funci&oacute;n
+                La otra excepci&oacute;n es cuando se hace una petici&oacute;n que recibir&aacute; una respuesta en formato JSONP. En este caso, el proveedor de la respuesta debe responder la petici&oacute;n con un <code>script</code> que puede ser cargado utilizando la etiqueta <code>&lt;script&gt;</code>, evitando as&iacute; la limitaci&oacute;n de realizar peticiones desde el mismo dominio. Dicha respuesta contendr&aacute; la informaci&oacute;n solicitada, contenida en una funci&oacute;n
               </p>
             </div>
             <div title="Ajax y Firebug" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Ajax y Firebug
                 </h3>
-              </div>
               <p>
-                Firebug (o el inspector WebKit que viene incluido en Chrome o Safari) son herramientas imprescindibles para trabajar con peticiones Ajax, ya que es posible observarlas desde la pesta&ntilde;a Consola de Firebug (o yendo a Recursos &gt; Panel XHR desde el inspector de Webkit) y revisar los detalles de dichas peticiones. Si algo esta fallando cuando al trabajar con Ajax, este es el primer lugar en donde debe dirigirse para saber cual es el problema.
+                Firebug (o el inspector WebKit que viene incluido en Chrome o Safari) son herramientas imprescindibles para trabajar con peticiones Ajax, ya que es posible observarlas desde la pesta&ntilde;a Consola de Firebug (o yendo a Recursos &gt; Panel XHR desde el inspector de Webkit) y revisar los detalles de dichas peticiones. Si algo esta fallando cuando trabaja con Ajax, este es el primer lugar en donde debe dirigirse para saber cual es el problema.
               </p>
             </div>
           </div>
           <div title="M&eacute;todos Ajax de jQuery" class="section">
-            <h2 class="title">
+            <h2>
               M&eacute;todos Ajax de jQuery
             </h2>
             <p>
-              Como se indic&oacute; anteriormente, jQuery posee varios m&eacute;todos para trabajar con Ajax. Sin embargo, todos est&aacute;n basados en el m&eacute;todo <code class="code">$.ajax</code>, por lo tanto, su comprensi&oacute;n es obligatoria. A continuaci&oacute;n se abarcar&aacute; dicho m&eacute;todo y luego se indicar&aacute; un breve resumen sobre los dem&aacute;s m&eacute;todos.
+              Como se indic&oacute; anteriormente, jQuery posee varios m&eacute;todos para trabajar con Ajax. Sin embargo, todos est&aacute;n basados en el m&eacute;todo <code>$.ajax</code>, por lo tanto, su comprensi&oacute;n es obligatoria. A continuaci&oacute;n se abarcar&aacute; dicho m&eacute;todo y luego se indicar&aacute; un breve resumen sobre los dem&aacute;s m&eacute;todos.
             </p>
             <p class="remark">
               <i><span class="remark">Generalmente, es preferible utilizar el m&eacute;todo $.ajax en lugar de los otros, ya que ofrece m&aacute;s caracter&iacute;sticas y su configuraci&oacute;n es muy comprensible.</span></i>
             </p>
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 $.ajax
               </h3>
-            </div>
             <p>
-              El m&eacute;todo <code class="code">$.ajax</code> es configurado a trav&eacute;s de un objeto, el cual contiene todas las instrucciones que necesita jQuery para completar la petici&oacute;n. Dicho m&eacute;todo es particularmente &uacute;til debido a que ofrece la posibilidad de especificar acciones en caso que la petici&oacute;n haya fallado o no. Adem&aacute;s, al estar configurado a trav&eacute;s de un objeto, es posible definir sus propiedades de forma separada, haciendo que sea m&aacute;s f&aacute;cil la reutilizaci&oacute;n del c&oacute;digo. Puede visitar <a href="http://api.jquery.com/jQuery.ajax/" class="ulink">http://api.jquery.com/jQuery.ajax/</a> para consultar la documentaci&oacute;n sobre las opciones disponibles en el m&eacute;todo.
+              El m&eacute;todo <code>$.ajax</code> es configurado a trav&eacute;s de un objeto, el cual contiene todas las instrucciones que necesita jQuery para completar la petici&oacute;n. Dicho m&eacute;todo es particularmente &uacute;til debido a que ofrece la posibilidad de especificar acciones en caso que la petici&oacute;n haya fallado o no. Adem&aacute;s, al estar configurado a trav&eacute;s de un objeto, es posible definir sus propiedades de forma separada, haciendo que sea m&aacute;s f&aacute;cil la reutilizaci&oacute;n del c&oacute;digo. Puede visitar <a href="http://api.jquery.com/jQuery.ajax/">http://api.jquery.com/jQuery.ajax/</a> para consultar la documentaci&oacute;n sobre las opciones disponibles en el m&eacute;todo.
             </p>
             <div class="example">
               <p class="title">
@@ -234,21 +214,19 @@ $.ajax({
               </div>
             </div>
             <div class="note">
-            <h3 class="title">
+            <h3>
               Nota
             </h3>
             <p>
-              Una aclaraci&oacute;n sobre el par&aacute;metro <code class="code">dataType</code>: Si el servidor devuelve informaci&oacute;n que es diferente al formato especificado, el c&oacute;digo fallar&aacute;, y la raz&oacute;n de porque lo hace no siempre quedar&aacute; clara debido a que la respuesta HTTP no mostrar&aacute; ning&uacute;n tipo de error. Cuando est&eacute; trabajando con peticiones Ajax, debe estar seguro que el servidor esta enviando el tipo de informaci&oacute;n que esta solicitando y verifique que la cabecera Content-type es exacta al tipo de dato. Por ejemplo, para informaci&oacute;n en formato JSON, la cabecera Content-type deber&iacute;a ser <code class="code">application/json</code>.
+              Una aclaraci&oacute;n sobre el par&aacute;metro <code>dataType</code>: Si el servidor devuelve informaci&oacute;n que es diferente al formato especificado, el c&oacute;digo fallar&aacute;, y la raz&oacute;n de porque lo hace no siempre quedar&aacute; clara debido a que la respuesta HTTP no mostrar&aacute; ning&uacute;n tipo de error. Cuando est&eacute; trabajando con peticiones Ajax, debe estar seguro que el servidor esta enviando el tipo de informaci&oacute;n que esta solicitando y verifique que la cabecera Content-type es exacta al tipo de dato. Por ejemplo, para informaci&oacute;n en formato JSON, la cabecera Content-type deber&iacute;a ser <code>application/json</code>.
             </p>
             </div>
             <div title="Opciones del m&eacute;todo $.ajax" class="section">
-              <div class="titlepage">
-                <h4 class="title">
-                  Opciones del m&eacute;todo <code class="code">$.ajax</code>
+                <h4>
+                  Opciones del m&eacute;todo <code>$.ajax</code>
                 </h4>
-              </div>
               <p>
-                El m&eacute;todo $.ajax posee muchas opciones de configuraci&oacute;n, y es justamente esta caracter&iacute;stica la que hace que sea un m&eacute;todo muy &uacute;til. Para una lista completa de las opciones disponibles, puede consultar <a href="http://api.jquery.com/jQuery.ajax/" class="ulink">http://api.jquery.com/jQuery.ajax/</a>; a continuaci&oacute;n se muestran las m&aacute;s comunes:
+                El m&eacute;todo $.ajax posee muchas opciones de configuraci&oacute;n, y es justamente esta caracter&iacute;stica la que hace que sea un m&eacute;todo muy &uacute;til. Para una lista completa de las opciones disponibles, puede consultar <a href="http://api.jquery.com/jQuery.ajax/">http://api.jquery.com/jQuery.ajax/</a>; a continuaci&oacute;n se muestran las m&aacute;s comunes:
               </p>
               <div class="variablelist">
                 <dl>
@@ -257,7 +235,7 @@ $.ajax({
                   </dt>
                   <dd>
                     <p>
-                      Establece si la petici&oacute;n ser&aacute; as&iacute;ncrona o no. De forma predeterminada el valor es <code class="code">true</code>. Debe tener en cuenta que si la opci&oacute;n se establece en <code class="code">false</code>, la petici&oacute;n bloquear&aacute; la ejecuci&oacute;n de otros c&oacute;digos hasta que dicha petici&oacute;n haya finalizado.
+                      Establece si la petici&oacute;n ser&aacute; as&iacute;ncrona o no. De forma predeterminada el valor es <code>true</code>. Debe tener en cuenta que si la opci&oacute;n se establece en <code>false</code>, la petici&oacute;n bloquear&aacute; la ejecuci&oacute;n de otros c&oacute;digos hasta que dicha petici&oacute;n haya finalizado.
                     </p>
                   </dd>
                   <dt>
@@ -265,7 +243,7 @@ $.ajax({
                   </dt>
                   <dd>
                     <p>
-                      Establece si la petici&oacute;n ser&aacute; guardada en la cache del navegador. De forma predeterminada es <code class="code">true</code> para todos los <span class="emphasis"><em>dataType</em></span> excepto para "<span class="emphasis"><em>script</em></span>" y "<span class="emphasis"><em>jsonp</em></span>". Cuando posee el valor false, se agrega una cadena de caracteres anti-cache al final de la URL de la petici&oacute;n.
+                      Establece si la petici&oacute;n ser&aacute; guardada en la cache del navegador. De forma predeterminada es <code>true</code> para todos los <em>dataType</em> excepto para "<em>script</em>" y "<em>jsonp</em>". Cuando posee el valor false, se agrega una cadena de caracteres anti-cache al final de la URL de la petici&oacute;n.
                     </p>
                   </dd>
                   <dt>
@@ -281,7 +259,7 @@ $.ajax({
                   </dt>
                   <dd>
                     <p>
-                      Establece el alcance en que la/las funciones de devoluci&oacute;n de llamada se ejecutaran (por ejemplo, define el significado de <code class="code">this</code> dentro de las funciones). De manera predeterminada <code class="code">this</code> hace referencia al objeto originalmente pasado al m&eacute;todo <code class="code">$.ajax</code>.
+                      Establece el alcance en que la/las funciones de devoluci&oacute;n de llamada se ejecutaran (por ejemplo, define el significado de <code>this</code> dentro de las funciones). De manera predeterminada <code>this</code> hace referencia al objeto originalmente pasado al m&eacute;todo <code>$.ajax</code>.
                     </p>
                   </dd>
                   <dt>
@@ -289,7 +267,7 @@ $.ajax({
                   </dt>
                   <dd>
                     <p>
-                      Establece la informaci&oacute;n que se enviar&aacute; al servidor. Esta puede ser tanto un objeto como una cadena de datos (por ejemplo <code class="code">foo=bar&amp;baz=bim</code>.)
+                      Establece la informaci&oacute;n que se enviar&aacute; al servidor. Esta puede ser tanto un objeto como una cadena de datos (por ejemplo <code>foo=bar&amp;baz=bim</code>.)
                     </p>
                   </dd>
                   <dt>
@@ -297,7 +275,7 @@ $.ajax({
                   </dt>
                   <dd>
                     <p>
-                      Establece el tipo de informaci&oacute;n que se espera recibir como respuesta del servidor. Si no se especifica ning&uacute;n valor, de forma predeterminada, jQuery revisa el tipo de <span class="emphasis"><em>MIME</em></span> que posee la respuesta.
+                      Establece el tipo de informaci&oacute;n que se espera recibir como respuesta del servidor. Si no se especifica ning&uacute;n valor, de forma predeterminada, jQuery revisa el tipo de <em>MIME</em> que posee la respuesta.
                     </p>
                   </dd>
                   <dt>
@@ -313,7 +291,7 @@ $.ajax({
                   </dt>
                   <dd>
                     <p>
-                      Establece el nombre de la funci&oacute;n de devoluci&oacute;n de llamada a enviar cuando se realiza una petici&oacute;n <span class="emphasis"><em>JSONP</em></span>. De forma predeterminada el nombre es "<span class="emphasis"><em>callback</em></span>
+                      Establece el nombre de la funci&oacute;n de devoluci&oacute;n de llamada a enviar cuando se realiza una petici&oacute;n <em>JSONP</em>. De forma predeterminada el nombre es "<em>callback</em>
                     </p>
                   </dd>
                   <dt>
@@ -321,7 +299,7 @@ $.ajax({
                   </dt>
                   <dd>
                     <p>
-                      Establece una funci&oacute;n a ejecutar si la petici&oacute;n a sido satisfactoria. Dicha funci&oacute;n recibe como argumentos la informaci&oacute;n de la petici&oacute;n (convertida a objeto JavaScript en el caso que <span class="emphasis"><em>dataType</em></span> sea <span class="emphasis"><em>JSON</em></span>), el estatus de la misma y el objeto de la petici&oacute;n en crudo.
+                      Establece una funci&oacute;n a ejecutar si la petici&oacute;n a sido satisfactoria. Dicha funci&oacute;n recibe como argumentos la informaci&oacute;n de la petici&oacute;n (convertida a objeto JavaScript en el caso que <em>dataType</em> sea <em>JSON</em>), el estatus de la misma y el objeto de la petici&oacute;n en crudo.
                     </p>
                   </dd>
                   <dt>
@@ -337,7 +315,7 @@ $.ajax({
                   </dt>
                   <dd>
                     <p>
-                      Si su valor es true, se utiliza el estilo de serializaci&oacute;n de datos utilizado antes de jQuery 1.4. Para m&aacute;s detalles puede visitar <a href="http://api.jquery.com/jQuery.param/" class="ulink">http://api.jquery.com/jQuery.param/</a>.
+                      Si su valor es true, se utiliza el estilo de serializaci&oacute;n de datos utilizado antes de jQuery 1.4. Para m&aacute;s detalles puede visitar <a href="http://api.jquery.com/jQuery.param/">http://api.jquery.com/jQuery.param/</a>.
                     </p>
                   </dd>
                   <dt>
@@ -359,17 +337,15 @@ $.ajax({
                 </dl>
               </div>
               <p>
-                La opci&oacute;n <code class="code">url</code> es obligatoria para el m&eacute;todo <code class="code">$.ajax</code>;
+                La opci&oacute;n <code>url</code> es obligatoria para el m&eacute;todo <code>$.ajax</code>;
               </p>
             </div>
             <div title="M&eacute;todos Convenientes" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   M&eacute;todos Convenientes
                 </h3>
-              </div>
               <p>
-                En caso que no quiera utilizar el m&eacute;todo <code class="code">$.ajax</code>, y no necesite los controladores de errores, existen otros m&eacute;todos m&aacute;s convenientes para realizar peticiones Ajax (aunque, como se indic&oacute; antes, estos est&aacute;n basados el m&eacute;todo <code class="code">$.ajax</code> con valores pre-establecidos de configuraci&oacute;n).
+                En caso que no quiera utilizar el m&eacute;todo <code>$.ajax</code>, y no necesite los controladores de errores, existen otros m&eacute;todos m&aacute;s convenientes para realizar peticiones Ajax (aunque, como se indic&oacute; antes, estos est&aacute;n basados el m&eacute;todo <code>$.ajax</code> con valores pre-establecidos de configuraci&oacute;n).
               </p>
               <p>
                 Los m&eacute;todos que provee la biblioteca son:
@@ -428,14 +404,14 @@ $.ajax({
                   </dt>
                   <dd>
                     <p>
-                      La informaci&oacute;n que se enviar&aacute; al servidor. Su valor es opcional y puede ser tanto un objeto como una cadena de datos (como <code class="code">foo=bar&amp;baz=bim</code>).
+                      La informaci&oacute;n que se enviar&aacute; al servidor. Su valor es opcional y puede ser tanto un objeto como una cadena de datos (como <code>foo=bar&amp;baz=bim</code>).
                     </p>
                     <div class="note">
-                    <h3 class="title">
+                    <h3>
                       Nota
                     </h3>
                     <p>
-                      Esta opci&oacute;n no es valida para el m&eacute;todo <code class="code">$.getScript</code>.
+                      Esta opci&oacute;n no es valida para el m&eacute;todo <code>$.getScript</code>.
                     </p>
                     </div>
                   </dd>
@@ -455,7 +431,7 @@ $.ajax({
                       El tipo de dato que se espera recibir desde el servidor. Su valor es opcional.
                     </p>
                     <div class="note">
-                    <h3 class="title">
+                    <h3>
                       Nota
                     </h3>
                     <p>
@@ -492,17 +468,15 @@ $.getJSON('/details.php', function(resp) {
               </div>
             </div>
             <div title="$.fn.load" class="section">
-              <div class="titlepage">
-                <h3 class="title">
-                  <code class="code">$.fn.load</code>
+                <h3>
+                  <code>$.fn.load</code>
                 </h3>
-              </div>
               <p>
-                El m&eacute;todo <code class="code">$.fn.load</code> es el &uacute;nico que se puede llamar desde una selecci&oacute;n. Dicho m&eacute;todo obtiene el c&oacute;digo HTML de una URL y rellena a los elementos seleccionados con la informaci&oacute;n obtenida. En conjunto con la URL, es posible especificar opcionalmente un selector, el cual obtendr&aacute; el c&oacute;digo especificado en dicha selecci&oacute;n.
+                El m&eacute;todo <code>$.fn.load</code> es el &uacute;nico que se puede llamar desde una selecci&oacute;n. Dicho m&eacute;todo obtiene el c&oacute;digo HTML de una URL y rellena a los elementos seleccionados con la informaci&oacute;n obtenida. En conjunto con la URL, es posible especificar opcionalmente un selector, el cual obtendr&aacute; el c&oacute;digo especificado en dicha selecci&oacute;n.
               </p>
               <div class="example">
                 <p class="title">
-                  <b>Utilizar el m&eacute;todo <code class="code">$.fn.load</code> para rellenar un elemento</b>
+                  <b>Utilizar el m&eacute;todo <code>$.fn.load</code> para rellenar un elemento</b>
                 </p>
                 <div class="example-contents">
                   <pre class="brush: js">
@@ -512,7 +486,7 @@ $('#newContent').load('/foo.html');
               </div>
               <div class="example">
                 <p class="title">
-                  <b>Utilizar el m&eacute;todo <code class="code">$.fn.load</code> para rellenar un elemento basado en un selector</b>
+                  <b>Utilizar el m&eacute;todo <code>$.fn.load</code> para rellenar un elemento basado en un selector</b>
                 </p>
                 <div class="example-contents">
                   <pre class="brush: js">
@@ -525,11 +499,11 @@ $('#newContent').load('/foo.html #myDiv h1:first', function(html) {
             </div>
           </div>
           <div title="Ajax y Formularios" class="section">
-            <h2 class="title">
+            <h2>
               Ajax y Formularios
             </h2>
             <p>
-              Las capacidades de jQuery con Ajax pueden ser especialmente &uacute;tiles para el trabajo con formularios. Por ejemplo, el plugin <a href="http://jquery.malsup.com/form/" class="ulink">jQuery Form Plugin</a> es una extensi&oacute;n para a&ntilde;adir capacidades Ajax a formularios. Existen dos m&eacute;todos que debe conocer para cuando este realizando este tipo de trabajos: <code class="code">$.fn.serialize</code> y <code class="code">$.fn.serializeArray</code>.
+              Las capacidades de jQuery con Ajax pueden ser especialmente &uacute;tiles para el trabajo con formularios. Por ejemplo, el plugin <a href="http://jquery.malsup.com/form/">jQuery Form Plugin</a> es una extensi&oacute;n para a&ntilde;adir capacidades Ajax a formularios. Existen dos m&eacute;todos que debe conocer para cuando este realizando este tipo de trabajos: <code>$.fn.serialize</code> y <code>$.fn.serializeArray</code>.
             </p>
             <div class="example">
               <p class="title">
@@ -559,11 +533,11 @@ $('#myForm').serializeArray();
             </div>
           </div>
           <div title="Trabajar con JSONP" class="section">
-            <h2 class="title">
+            <h2>
               Trabajar con JSONP
             </h2>
             <p>
-              En los &uacute;ltimos tiempos, la introducci&oacute;n de JSONP, ha permitido la creaci&oacute;n de aplicaciones h&iacute;bridas de contenidos. Muchos sitios importantes ofrecen JSONP como servicio de informaci&oacute;n, el cual se accede a trav&eacute;s de una API (en ingl&eacute;s <span class="emphasis"><em>Application programming interface</em></span>) predefinida. Un servicio particular que permite obtener informaci&oacute;n en formato JSONP es <a href="http://developer.yahoo.com/yql/console/" class="ulink">Yahoo! Query Language</a>, el cual se utiliza a continuaci&oacute;n para obtener, por ejemplo, noticias sobre gatos:
+              En los &uacute;ltimos tiempos, la introducci&oacute;n de JSONP, ha permitido la creaci&oacute;n de aplicaciones h&iacute;bridas de contenidos. Muchos sitios importantes ofrecen JSONP como servicio de informaci&oacute;n, el cual se accede a trav&eacute;s de una API (en ingl&eacute;s <em>Application programming interface</em>) predefinida. Un servicio particular que permite obtener informaci&oacute;n en formato JSONP es <a href="http://developer.yahoo.com/yql/console/">Yahoo! Query Language</a>, el cual se utiliza a continuaci&oacute;n para obtener, por ejemplo, noticias sobre gatos:
             </p>
             <div class="example">
               <p class="title">
@@ -596,15 +570,15 @@ $.ajax({
               </div>
             </div>
             <p>
-              jQuery se encarga de solucionar todos los aspectos complejos de la petici&oacute;n JSONP. Lo &uacute;nico que debe hacer es especificar el nombre de la funci&oacute;n de devoluci&oacute;n (en este caso "<span class="emphasis"><em>callback</em></span>", seg&uacute;n lo especifica YQL) y el resultado final ser&aacute; como una petici&oacute;n Ajax normal.
+              jQuery se encarga de solucionar todos los aspectos complejos de la petici&oacute;n JSONP. Lo &uacute;nico que debe hacer es especificar el nombre de la funci&oacute;n de devoluci&oacute;n (en este caso "<em>callback</em>", seg&uacute;n lo especifica YQL) y el resultado final ser&aacute; como una petici&oacute;n Ajax normal.
             </p>
           </div>
           <div title="Eventos Ajax" class="section">
-            <h2 class="title">
+            <h2>
               Eventos Ajax
             </h2>
             <p>
-              A menudo, querr&aacute; ejecutar una funci&oacute;n cuando una petici&oacute;n haya comenzado o terminado, como por ejemplo, mostrar o ocultar un indicador. En lugar de definir estas funciones dentro de cada petici&oacute;n, jQuery provee la posibilidad de vincular eventos Ajax a elementos seleccionados. Para una lista completa de eventos Ajax, puede consultar <a href="http://docs.jquery.com/Ajax_Events" class="ulink">http://docs.jquery.com/Ajax_Events</a>.
+              A menudo, querr&aacute; ejecutar una funci&oacute;n cuando una petici&oacute;n haya comenzado o terminado, como por ejemplo, mostrar o ocultar un indicador. En lugar de definir estas funciones dentro de cada petici&oacute;n, jQuery provee la posibilidad de vincular eventos Ajax a elementos seleccionados. Para una lista completa de eventos Ajax, puede consultar <a href="http://docs.jquery.com/Ajax_Events">http://docs.jquery.com/Ajax_Events</a>.
             </p>
             <div class="example">
               <p class="title">
@@ -620,27 +594,25 @@ $('#loading_indicator')
             </div>
           </div>
           <div title="Ejercicios" class="section">
-            <h2 class="title">
+            <h2>
               Ejercicios
             </h2>
             <div title="Load External Content" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Cargar Contenido Externo
                 </h3>
-              </div>
               <p>
-                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/load.js</code>. La tarea es cargar el contenido de un art&iacute;culo de blog cuando el usuario haga click en el t&iacute;tulo del &iacute;tem.
+                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/load.js</code>. La tarea es cargar el contenido de un art&iacute;culo de blog cuando el usuario haga click en el t&iacute;tulo del &iacute;tem.
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
-                  <li>Crear un elementos <span class="emphasis"><em>div</em></span> despu&eacute;s del titulo de cada titulo de art&iacute;culo de blog y guardar una referencia hacia ellos en el elemento de titulo utilizando <code class="code">$.fn.data</code>.                  </li>
-                  <li>Vincular un evento click al titulo, el cual utilizar&aacute; el m&eacute;todo <code class="code">$.fn.load</code> para cargar en cada <span class="emphasis"><em>div</em></span> creado el contenido apropiado desde el archivo <code class="filename">/exercises/data/blog.html</code>. No olvide de deshabilitar el comportamiento predeterminado del evento <span class="emphasis"><em>click</em></span>.
+                  <li>Crear un elementos <em>div</em> despu&eacute;s del titulo de cada titulo de art&iacute;culo de blog y guardar una referencia hacia ellos en el elemento de titulo utilizando <code>$.fn.data</code>.                  </li>
+                  <li>Vincular un evento click al titulo, el cual utilizar&aacute; el m&eacute;todo <code>$.fn.load</code> para cargar en cada <em>div</em> creado el contenido apropiado desde el archivo <code class="filename">/exercises/data/blog.html</code>. No olvide de deshabilitar el comportamiento predeterminado del evento <em>click</em>.
                   </li>
                 </ol>
               </div>
               <p>
-                Notar que cada titulo de art&iacute;culo de blog en index.html incluye un enlace hacia el art&iacute;culo. Necesitar&aacute; aprovechar el atributo href de cada enlace para obtener el contenido propio de blog.html. Una vez obtenida el valor del atributo, puede utilizar la siguiente forma para procesar la informaci&oacute;n y convertirla en un selector para utilizar en conjunto con <code class="code">$.fn.load</code>:
+                Notar que cada titulo de art&iacute;culo de blog en index.html incluye un enlace hacia el art&iacute;culo. Necesitar&aacute; aprovechar el atributo href de cada enlace para obtener el contenido propio de blog.html. Una vez obtenida el valor del atributo, puede utilizar la siguiente forma para procesar la informaci&oacute;n y convertirla en un selector para utilizar en conjunto con <code>$.fn.load</code>:
               </p>
               <pre class="brush: js">
 var href = 'blog.html#post1';
@@ -648,37 +620,35 @@ var tempArray = href.split('#');
 var id = '#' + tempArray[1];
 </pre>
               <p>
-                Recuerde utilizar <code class="code">console.log</code> para asegurarse que esta realizando lo correcto.
+                Recuerde utilizar <code>console.log</code> para asegurarse que esta realizando lo correcto.
               </p>
             </div>
             <div title="Cargar Contenido Utilizando JSON" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Cargar Contenido Utilizando JSON
                 </h3>
-              </div>
                <p>
-                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/specials.js</code>. La tarea es mostrar los detalles del usuario para un d&iacute;a determinado cuando se selecciona desde la lista desplegable.
+                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/specials.js</code>. La tarea es mostrar los detalles del usuario para un d&iacute;a determinado cuando se selecciona desde la lista desplegable.
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
                   <li>
                     <p>
-                      A&ntilde;adir un elemento <span class="emphasis"><em>div</em></span> despu&eacute;s del formulario que se encuentra dentro del elemento <span class="emphasis"><em>#specials</em></span>; all&iacute; ser&aacute; el lugar en donde se colocar&aacute; la informaci&oacute;n a obtener.
+                      A&ntilde;adir un elemento <em>div</em> despu&eacute;s del formulario que se encuentra dentro del elemento <em>#specials</em>; all&iacute; ser&aacute; el lugar en donde se colocar&aacute; la informaci&oacute;n a obtener.
                     </p>
                   </li>
-                  <li>Vincular el evento <span class="emphasis"><em>change</em></span> en el elemento <span class="emphasis"><em>select</em></span>; cuando se realiza un cambio en la selecci&oacute;n, enviar una petici&oacute;n Ajax a <code class="filename">/exercises/data/specials.json</code>.
+                  <li>Vincular el evento <em>change</em> en el elemento <em>select</em>; cuando se realiza un cambio en la selecci&oacute;n, enviar una petici&oacute;n Ajax a <code class="filename">/exercises/data/specials.json</code>.
                   </li>
-                  <li>Cuando la petici&oacute;n devuelve una respuesta, utilizar el valor seleccionado en el select (ayuda: <code class="code">$.fn.val</code>) para buscar la informaci&oacute;n correspondiente en la respuesta JSON.
+                  <li>Cuando la petici&oacute;n devuelve una respuesta, utilizar el valor seleccionado en el select (ayuda: <code>$.fn.val</code>) para buscar la informaci&oacute;n correspondiente en la respuesta JSON.
                   </li>
                   <li>
                     <p>
-                      A&ntilde;adir alg&uacute;n HTML con la informaci&oacute;n obtenida en el <span class="emphasis"><em>div</em></span> creado anteriormente.
+                      A&ntilde;adir alg&uacute;n HTML con la informaci&oacute;n obtenida en el <em>div</em> creado anteriormente.
                     </p>
                   </li>
                   <li>
                     <p>
-                      Finalmente remover el bot&oacute;n <span class="emphasis"><em>submit</em></span> del formulario.
+                      Finalmente remover el bot&oacute;n <em>submit</em> del formulario.
                     </p>
                   </li>
                 </ol>

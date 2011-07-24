@@ -1,17 +1,7 @@
         <div id="capitulo-2" title="Conceptos B&aacute;sicos de JavaScript" class="chapter">
-          <div class="titlepage">
-            <div>
-              <div>
-                <h2 class="title">
-                  Conceptos B&aacute;sicos de JavaScript
-                </h2>
-              </div>
-            </div>
-          </div>
+			<h2 class="title">Conceptos B&aacute;sicos de JavaScript</h2>
           <div title="Introducci&oacute;n" class="section">
-            <h2 class="title">
-              Introducci&oacute;n
-            </h2>
+            <h2>Introducci&oacute;n</h2>
             <p>
               jQuery se encuentra escrito en JavaScript, un lenguaje de programaci&oacute;n muy rico y expresivo. 
             </p>
@@ -23,9 +13,7 @@
             </p>
           </div>
           <div title="Sintaxis B&aacute;sica" class="section">
-            <h2 class="title">
-              Sintaxis B&aacute;sica
-            </h2>
+            <h2>Sintaxis B&aacute;sica</h2>
             <p>
               Comprensi&oacute;n de declaraciones, nombres de variables, espacios en blanco, y otras sintaxis b&aacute;sicas de JavaScript.
             </p>
@@ -74,15 +62,11 @@ var foo = function() {
             </div>
           </div>
           <div title="Operadores" class="section">
-            <h2 class="title">
-              Operadores
-            </h2>
+            <h2>Operadores</h2>
             <div title="Operadores B&aacute;sicos" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Operadores B&aacute;sicos
                 </h3>
-              </div>
               <p>
                 Los operadores b&aacute;sicos permiten manipular valores.
               </p>
@@ -125,13 +109,11 @@ var k = i++;  // incrementaci&oacute;n posterior: k es igual a 2; i es igual a 3
               </div>
             </div>
             <div title="Operaciones con N&uacute;meros y Cadenas de Caracteres" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Operaciones con N&uacute;meros y Cadenas de Caracteres
                 </h3>
-              </div>
               <p>
-                En JavaScript, las operaciones con n&uacute;meros y cadenas de caracteres (en ingl&eacute;s <span class="emphasis"><em>strings</em></span>) pueden ocasionar resultados no esperados.
+                En JavaScript, las operaciones con n&uacute;meros y cadenas de caracteres (en ingl&eacute;s <em>strings</em>) pueden ocasionar resultados no esperados.
               </p>
               <div class="example">
                 <p class="title">
@@ -161,7 +143,7 @@ console.log(foo + Number(bar));  // la consola de depuraci&oacute;n muestra 3
                 </div>
               </div>
               <p>
-                El constructor <em class="firstterm">Number</em>, cuando es llamado como una funci&oacute;n (como se muestra en el ejemplo) obliga a su argumento a comportarse como un n&uacute;mero. Tambi&eacute;n es posible utilizar el operador de <span class="emphasis"><em>suma unaria</em></span>, entregando el mismo resultado:
+                El constructor <em class="firstterm">Number</em>, cuando es llamado como una funci&oacute;n (como se muestra en el ejemplo) obliga a su argumento a comportarse como un n&uacute;mero. Tambi&eacute;n es posible utilizar el operador de <em>suma unaria</em>, entregando el mismo resultado:
               </p>
               <div class="example">
                 <p class="title">
@@ -174,11 +156,9 @@ console.log(foo + +bar);
                 </div>
               </div>
             </div>
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 Operadores L&oacute;gicos
               </h3>
-            </div>
             <p>
               Los operadores l&oacute;gicos permiten evaluar una serie de operandos utilizando operaciones AND y OR.
             </p>
@@ -202,17 +182,17 @@ baz &amp;&amp; foo;   // devuelve 1, el cual es verdadero (true)
               </div>
             </div>
             <p>
-              El operador <code class="code">||</code> (OR l&oacute;gico) devuelve el valor del primer operando, si &eacute;ste es verdadero; caso contrario devuelve el segundo operando. Si ambos operandos son falsos devuelve falso (<span class="emphasis"><em>false</em></span>). El operador <code class="code">&&</code> (AND l&oacute;gico) devuelve el valor del primer operando si &eacute;ste es falso; caso contrario devuelve el segundo operando. Cuando ambos valores son verdaderos devuelve verdadero (<span class="emphasis"><em>true</em></span>), sino devuelve falso.
+              El operador <code>||</code> (OR l&oacute;gico) devuelve el valor del primer operando, si &eacute;ste es verdadero; caso contrario devuelve el segundo operando. Si ambos operandos son falsos devuelve falso (<em>false</em>). El operador <code>&&</code> (AND l&oacute;gico) devuelve el valor del primer operando si &eacute;ste es falso; caso contrario devuelve el segundo operando. Cuando ambos valores son verdaderos devuelve verdadero (<em>true</em>), sino devuelve falso.
             </p>
             <p>
-			  Puede consultar la secci&oacute;n <a title="Elementos Verdaderos y Falsos" href="#Elementos Verdaderos y Falsos" class="xref">"Elementos Verdaderos y Falsos"</a> para m&aacute;s detalles sobre que valores se eval&uacute;an como <code class="code">true</code> y cuales se eval&uacute;an como <code class="code">false</code>.
+			  Puede consultar la secci&oacute;n <a title="Elementos Verdaderos y Falsos" href="#Elementos Verdaderos y Falsos" class="xref">"Elementos Verdaderos y Falsos"</a> para m&aacute;s detalles sobre que valores se eval&uacute;an como <code>true</code> y cuales se eval&uacute;an como <code>false</code>.
             </p>
             <div class="note">
-            <h3 class="title">
+            <h3>
               Nota
             </h3>
             <p>
-              Puede que a veces note que algunos desarrolladores utilizan esta l&oacute;gica en flujos de control en lugar de utilizar la declaraci&oacute;n <code class="code">if</code>. Por ejemplo:
+              Puede que a veces note que algunos desarrolladores utilizan esta l&oacute;gica en flujos de control en lugar de utilizar la declaraci&oacute;n <code>if</code>. Por ejemplo:
             </p>
             <pre class="brush: js">
 // realizar algo con foo si foo es verdadero
@@ -228,11 +208,9 @@ var bar = baz || createBar();
             </p>
             </div>
             <div title="Operadores de Comparaci&oacute;n" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Operadores de Comparaci&oacute;n
                 </h3>
-              </div>
               <p>
                 Los operadores de comparaci&oacute;n permiten comprobar si determinados valores son equivalentes o id&eacute;nticos.
               </p>
@@ -263,11 +241,9 @@ foo &lt;= baz;   // devuelve verdadero (true)
               </div>
             </div>
           </div>
-          <h2 class="title">
-            C&oacute;digo Condicional
-          </h2>
+          <h2>C&oacute;digo Condicional</h2>
+            A veces se desea ejecutar un bloque de c&oacute;digo bajo ciertas condiciones. Las estructuras de control de flujo — a trav&eacute;s de la utilizaci&oacute;n de las declaraciones <code>if</code> y <code>else</code> permiten hacerlo.
           <p>
-            A veces se desea ejecutar un bloque de c&oacute;digo bajo ciertas condiciones. Las estructuras de control de flujo — a trav&eacute;s de la utilizaci&oacute;n de las declaraciones <code class="code">if</code> y <code class="code">else</code> permiten hacerlo.
           </p>
           <div class="example">
             <p class="title">
@@ -296,29 +272,27 @@ if (bar) {
             </div>
           </div>
           <div class="note">
-          <h3 class="title">
+          <h3>
             Nota
           </h3>
           <p>
-            En una l&iacute;nea singular, cuando se escribe una declaraci&oacute;n <code class="code">if</code>, las llaves no son estrictamente necesarias; sin embargo es recomendable su utilizaci&oacute;n, ya que hace que el c&oacute;digo sea mucho m&aacute;s legible.
+            En una l&iacute;nea singular, cuando se escribe una declaraci&oacute;n <code>if</code>, las llaves no son estrictamente necesarias; sin embargo es recomendable su utilizaci&oacute;n, ya que hace que el c&oacute;digo sea mucho m&aacute;s legible.
           </p>
           <p>
-            Debe tener en cuenta de no definir funciones con el mismo nombre m&uacute;ltiples veces dentro de declaraciones <code class="code">if</code>/<code class="code">else</code>, ya que puede obtener resultados no esperados.
+            Debe tener en cuenta de no definir funciones con el mismo nombre m&uacute;ltiples veces dentro de declaraciones <code>if</code>/<code>else</code>, ya que puede obtener resultados no esperados.
           </p>
           </div>
 
           <div title="Elementos Verdaderos y Falsos" id="Elementos Verdaderos y Falsos" class="section">
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 Elementos Verdaderos y Falsos
               </h3>
-            </div>
             <p>
               Para controlar el flujo adecuadamente, es importante entender qu&eacute; tipos de valores son "verdaderos" y cuales "falsos". A veces, algunos valores pueden parecer una cosa pero al final terminan siendo otra.
             </p>
             <div class="example">
               <p class="title">
-                <b>Valores que devuelven <code class="code">verdadero (true)</code></b>
+                <b>Valores que devuelven <code>verdadero (true)</code></b>
               </p>
               <div class="example-contents">
                 <pre class="brush: js">
@@ -332,7 +306,7 @@ if (bar) {
             </div>
             <div class="example">
               <p class="title">
-                <b>Valores que devuelven <code class="code">falso (false)</code></b>
+                <b>Valores que devuelven <code>falso (false)</code></b>
               </p>
               <div class="example-contents">
                 <pre class="brush: js">
@@ -346,13 +320,11 @@ undefined;  // tenga cuidado -- indefinido (undefined) puede ser redefinido
             </div>
           </div>
           <div title="Variables Condicionales Utilizando el Operador Ternario" class="section">
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 Variables Condicionales Utilizando el Operador Ternario
               </h3>
-            </div>
             <p>
-              A veces se desea establecer el valor de una variable dependiendo de cierta condici&oacute;n. Para hacerlo se puede utilizar una declaraci&oacute;n <code class="code">if</code>/<code class="code">else</code>, sin embargo en muchos casos es m&aacute;s conveniente utilizar el operador ternario. <span class="termdef">[Definici&oacute;n: El <em class="firstterm">operador ternario</em> eval&uacute;a una condici&oacute;n; si la condici&oacute;n es verdadera, devuelve cierto valor, caso contrario devuelve un valor diferente.]</span>
+              A veces se desea establecer el valor de una variable dependiendo de cierta condici&oacute;n. Para hacerlo se puede utilizar una declaraci&oacute;n <code>if</code>/<code>else</code>, sin embargo en muchos casos es m&aacute;s conveniente utilizar el operador ternario. <span class="termdef">[Definici&oacute;n: El <em class="firstterm">operador ternario</em> eval&uacute;a una condici&oacute;n; si la condici&oacute;n es verdadera, devuelve cierto valor, caso contrario devuelve un valor diferente.]</span>
             </p>
             <div class="example">
               <p class="title">
@@ -371,11 +343,9 @@ var foo = bar ? 1 : 0;
             </p>
           </div>
           <div title="Declaraci&oacute;n Switch" class="section">
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 Declaraci&oacute;n Switch
               </h3>
-            </div>
             <p>
               En lugar de utilizar una serie de declaraciones if/else/else if/else, a veces puede ser &uacute;til la utilizaci&oacute;n de la declaraci&oacute;n switch. <span class="termdef">[Definici&oacute;n: La declaraci&oacute;n <em class="firstterm">Switch</em> eval&uacute;a el valor de una variable &oacute; expresi&oacute;n, y ejecuta diferentes bloques de c&oacute;digo dependiendo de ese valor.]</span>
             </p>
@@ -432,11 +402,9 @@ if (stuffToDo[foo]) {
             </p>
           </div>
           <div title="Bucles" class="section">
-            <h2 class="title">
-              Bucles
-            </h2>
+            <h2>Bucles</h2>
             <p>
-              Los bucles (en ingl&eacute;s <span class="emphasis"><em>loops</em></span>) permiten ejecutar un bloque de c&oacute;digo un determinado n&uacute;mero de veces.
+              Los bucles (en ingl&eacute;s <em>loops</em>) permiten ejecutar un bloque de c&oacute;digo un determinado n&uacute;mero de veces.
             </p>
             <div class="example">
               <p class="title">
@@ -452,36 +420,34 @@ for (var i=0; i&lt;5; i++) {
               </div>
             </div>
             <p>
-              <em><span class="remark">Note que en el ejemplo </span></em> <em>se utiliza la palabra <span class="token">var</span> antes de la variable <code class="varname">i</code>, esto hace que dicha variable quede dentro del "alcance" (en ingl&eacute;s <span class="emphasis"><em>scope</em></span>) del bucle. M&aacute;s adelante en este cap&iacute;tulo se examinar&aacute; en profundidad el concepto de alcance.</em>
+              <em><span class="remark">Note que en el ejemplo </span></em> <em>se utiliza la palabra <span class="token">var</span> antes de la variable <code class="varname">i</code>, esto hace que dicha variable quede dentro del "alcance" (en ingl&eacute;s <em>scope</em>) del bucle. M&aacute;s adelante en este cap&iacute;tulo se examinar&aacute; en profundidad el concepto de alcance.</em>
             </p>
             <div title="Bucles Utilizando For" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Bucles Utilizando For
                 </h3>
-              </div>
               <p>
-                Un bucle utilizando <code class="code">for</code> se compone de cuatro estados y posee la siguiente estructura:
+                Un bucle utilizando <code>for</code> se compone de cuatro estados y posee la siguiente estructura:
               </p>
               <pre class="brush: js">
 for ([expresi&oacute;nInicial]; [condici&oacute;n]; [incrementoDeLaExpresi&oacute;n])
  [cuerpo]
 </pre>
               <p>
-                El estado <span class="emphasis"><em>expresi&oacute;nInicial</em></span> es ejecutado una sola vez, antes que el bucle comience. &eacute;ste otorga la oportunidad de preparar o declarar variables.
+                El estado <em>expresi&oacute;nInicial</em> es ejecutado una sola vez, antes que el bucle comience. &eacute;ste otorga la oportunidad de preparar o declarar variables.
               </p>
               <p>
-				El estado <span class="emphasis"><em>condici&oacute;n</em></span> es ejecutado antes de cada repetici&oacute;n, y retorna un valor que decide si el bucle debe continuar ejecut&aacute;ndose o no. Si el estado condicional eval&uacute;a un valor falso el bucle se detiene.
+				El estado <em>condici&oacute;n</em> es ejecutado antes de cada repetici&oacute;n, y retorna un valor que decide si el bucle debe continuar ejecut&aacute;ndose o no. Si el estado condicional eval&uacute;a un valor falso el bucle se detiene.
               </p>
               <p>
-				El estado <span class="emphasis"><em>incrementoDeLaExpresi&oacute;n</em></span> es ejecutado al final de cada repetici&oacute;n y otorga la oportunidad de cambiar el estado de importantes variables. Por lo general, este estado implica la incrementaci&oacute;n o decrementaci&oacute;n de un contador.
+				El estado <em>incrementoDeLaExpresi&oacute;n</em> es ejecutado al final de cada repetici&oacute;n y otorga la oportunidad de cambiar el estado de importantes variables. Por lo general, este estado implica la incrementaci&oacute;n o decrementaci&oacute;n de un contador.
               </p>
               <p>
-                El <span class="emphasis"><em>cuerpo</em></span> es el c&oacute;digo a ejecutar en cada repetici&oacute;n del bucle.
+                El <em>cuerpo</em> es el c&oacute;digo a ejecutar en cada repetici&oacute;n del bucle.
               </p>
               <div class="example">
                 <p class="title">
-                  <b>Un t&iacute;pico bucle utilizando <code class="code">for</code></b>
+                  <b>Un t&iacute;pico bucle utilizando <code>for</code></b>
                 </p>
                 <div class="example-contents">
                   <pre class="brush: js">
@@ -495,20 +461,18 @@ for (var i = 0, limit = 100; i &lt; limit; i++) {
               </div>
             </div>
             <div title="Bucles Utilizando While" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Bucles Utilizando While
                 </h3>
-              </div>
               <p>
-				Un bucle utilizando <code class="code">while</code> es similar a una declaraci&oacute;n condicional <code class="code">if</code>, excepto que el cuerpo va a continuar ejecut&aacute;ndose hasta que la condici&oacute;n a evaluar sea falsa.
+				Un bucle utilizando <code>while</code> es similar a una declaraci&oacute;n condicional <code>if</code>, excepto que el cuerpo va a continuar ejecut&aacute;ndose hasta que la condici&oacute;n a evaluar sea falsa.
               </p>
               <pre class="brush: js">
 while ([condici&oacute;n]) [cuerpo]
 </pre>
               <div class="example">
                 <p class="title">
-                  <b>Un t&iacute;pico bucle utilizando <code class="code">while</code></b>
+                  <b>Un t&iacute;pico bucle utilizando <code>while</code></b>
                 </p>
                 <div class="example-contents">
                   <pre class="brush: js">
@@ -529,7 +493,7 @@ while (i &lt; 100) {
               </p>
               <div class="example">
                 <p class="title">
-                  <b>Bucle utilizando <code class="code">while</code> con la combinaci&oacute;n de la condici&oacute;n y la incrementaci&oacute;n</b>
+                  <b>Bucle utilizando <code>while</code> con la combinaci&oacute;n de la condici&oacute;n y la incrementaci&oacute;n</b>
                 </p>
                 <div class="example-contents">
                   <pre class="brush: js">
@@ -542,24 +506,22 @@ while (++i &lt; 100) {
                 </div>
               </div>
               <p>
-				Se comienza en <code class="code">-1</code> y luego se utiliza la incrementaci&oacute;n previa (<code class="code">++i</code>).
+				Se comienza en <code>-1</code> y luego se utiliza la incrementaci&oacute;n previa (<code>++i</code>).
               </p>
             </div>
             <div title="Bucles Utilizando Do-while" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Bucles Utilizando Do-while
                 </h3>
-              </div>
               <p>
-                Este bucle es exactamente igual que el bucle utilizando <code class="code">while</code> excepto que el cuerpo es ejecutado al menos una vez antes que la condici&oacute;n sea evaluada.
+                Este bucle es exactamente igual que el bucle utilizando <code>while</code> excepto que el cuerpo es ejecutado al menos una vez antes que la condici&oacute;n sea evaluada.
               </p>
               <pre class="brush: js">
 do [cuerpo] while ([condici&oacute;n])
 </pre>
               <div class="example">
                 <p class="title">
-                  <b>Un bucle utilizando <code class="code">do-while</code></b>
+                  <b>Un bucle utilizando <code>do-while</code></b>
                 </p>
                 <div class="example-contents">
                   <pre class="brush: js">
@@ -579,13 +541,11 @@ do {
               </p>
             </div>
             <div title="Break y Continue" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Break y Continue
                 </h3>
-              </div>
               <p>
-				Usualmente, el fin de la ejecuci&oacute;n de un bucle resultar&aacute; cuando la condici&oacute;n no siga evaluando un valor verdadero, sin embargo tambi&eacute;n es posible parar un bucle utilizando la declaraci&oacute;n <code class="code">break</code> dentro del cuerpo.
+				Usualmente, el fin de la ejecuci&oacute;n de un bucle resultar&aacute; cuando la condici&oacute;n no siga evaluando un valor verdadero, sin embargo tambi&eacute;n es posible parar un bucle utilizando la declaraci&oacute;n <code>break</code> dentro del cuerpo.
               </p>
               <div class="example">
                 <p class="title">
@@ -602,7 +562,7 @@ for (var i = 0; i &lt; 10; i++) {
                 </div>
               </div>
               <p>
-				Tambi&eacute;n puede suceder que quiera continuar con el bucle sin tener que ejecutar m&aacute;s sentencias del cuerpo del mismo bucle. Esto puede realizarse utilizando la declaraci&oacute;n <code class="code">continue</code>.
+				Tambi&eacute;n puede suceder que quiera continuar con el bucle sin tener que ejecutar m&aacute;s sentencias del cuerpo del mismo bucle. Esto puede realizarse utilizando la declaraci&oacute;n <code>continue</code>.
               </p>
               <div class="example">
                 <p class="title">
@@ -627,189 +587,185 @@ for (var i = 0; i &lt; 10; i++) {
             </div>
           </div>
           <div title="Palabras Reservadas" class="section">
-            <h2 class="title">
-              Palabras Reservadas
-            </h2>
+            <h2>Palabras Reservadas</h2>
             <p>
               JavaScript posee un n&uacute;mero de "palabras reservadas", o palabras que son especiales dentro del mismo lenguaje. Debe utilizar estas palabras cuando las necesite para su uso espec&iacute;fico.
             </p>
             <ul>
                 <li>
-                  <code class="code">abstract</code>
+                  <code>abstract</code>
                 </li>
                 <li>
-                  <code class="code">boolean</code>
+                  <code>boolean</code>
                 </li>
                 <li>
-                  <code class="code">break</code>
+                  <code>break</code>
                 </li>
                 <li>
-                  <code class="code">byte</code>
+                  <code>byte</code>
                 </li>
                 <li>
-                  <code class="code">case</code>
+                  <code>case</code>
                 </li>
                 <li>
-                  <code class="code">catch</code>
+                  <code>catch</code>
                 </li>
                 <li>
-                  <code class="code">char</code>
+                  <code>char</code>
                 </li>
                 <li>
-                  <code class="code">class</code>
+                  <code>class</code>
                 </li>
                 <li>
-                  <code class="code">const</code>
+                  <code>const</code>
                 </li>
                 <li>
-                  <code class="code">continue</code>
+                  <code>continue</code>
                 </li>
                 <li>
-                  <code class="code">debugger</code>
+                  <code>debugger</code>
                 </li>
                 <li>
-                  <code class="code">default</code>
+                  <code>default</code>
                 </li>
                 <li>
-                  <code class="code">delete</code>
+                  <code>delete</code>
                 </li>
                 <li>
-                  <code class="code">do</code>
+                  <code>do</code>
                 </li>
                 <li>
-                  <code class="code">double</code>
+                  <code>double</code>
                 </li>
                 <li>
-                  <code class="code">else</code>
+                  <code>else</code>
                 </li>
                 <li>
-                  <code class="code">enum</code>
+                  <code>enum</code>
                 </li>
                 <li>
-                  <code class="code">export</code>
+                  <code>export</code>
                 </li>
                 <li>
-                  <code class="code">extends</code>
+                  <code>extends</code>
                 </li>
                 <li>
-                  <code class="code">final</code>
+                  <code>final</code>
                 </li>
                 <li>
-                  <code class="code">finally</code>
+                  <code>finally</code>
                 </li>
                 <li>
-                  <code class="code">float</code>
+                  <code>float</code>
                 </li>
                 <li>
-                  <code class="code">for</code>
+                  <code>for</code>
                 </li>
                 <li>
-                  <code class="code">function</code>
+                  <code>function</code>
                 </li>
                 <li>
-                  <code class="code">goto</code>
+                  <code>goto</code>
                 </li>
                 <li>
-                  <code class="code">if</code>
+                  <code>if</code>
                 </li>
                 <li>
-                  <code class="code">implements</code>
+                  <code>implements</code>
                 </li>
                 <li>
-                  <code class="code">import</code>
+                  <code>import</code>
                 </li>
                 <li>
-                  <code class="code">in</code>
+                  <code>in</code>
                 </li>
                 <li>
-                  <code class="code">instanceof</code>
+                  <code>instanceof</code>
                 </li>
                 <li>
-                  <code class="code">int</code>
+                  <code>int</code>
                 </li>
                 <li>
-                  <code class="code">interface</code>
+                  <code>interface</code>
                 </li>
                 <li>
-                  <code class="code">long</code>
+                  <code>long</code>
                 </li>
                 <li>
-                  <code class="code">native</code>
+                  <code>native</code>
                 </li>
                 <li>
-                  <code class="code">new</code>
+                  <code>new</code>
                 </li>
                 <li>
-                  <code class="code">package</code>
+                  <code>package</code>
                 </li>
                 <li>
-                  <code class="code">private</code>
+                  <code>private</code>
                 </li>
                 <li>
-                  <code class="code">protected</code>
+                  <code>protected</code>
                 </li>
                 <li>
-                  <code class="code">public</code>
+                  <code>public</code>
                 </li>
                 <li>
-                  <code class="code">return</code>
+                  <code>return</code>
                 </li>
                 <li>
-                  <code class="code">short</code>
+                  <code>short</code>
                 </li>
                 <li>
-                  <code class="code">static</code>
+                  <code>static</code>
                 </li>
                 <li>
-                  <code class="code">super</code>
+                  <code>super</code>
                 </li>
                 <li>
-                  <code class="code">switch</code>
+                  <code>switch</code>
                 </li>
                 <li>
-                  <code class="code">synchronized</code>
+                  <code>synchronized</code>
                 </li>
                 <li>
-                  <code class="code">this</code>
+                  <code>this</code>
                 </li>
                 <li>
-                  <code class="code">throw</code>
+                  <code>throw</code>
                 </li>
                 <li>
-                  <code class="code">throws</code>
+                  <code>throws</code>
                 </li>
                 <li>
-                  <code class="code">transient</code>
+                  <code>transient</code>
                 </li>
                 <li>
-                  <code class="code">try</code>
+                  <code>try</code>
                 </li>
                 <li>
-                  <code class="code">typeof</code>
+                  <code>typeof</code>
                 </li>
                 <li>
-                  <code class="code">var</code>
+                  <code>var</code>
                 </li>
                 <li>
-                  <code class="code">void</code>
+                  <code>void</code>
                 </li>
                 <li>
-                  <code class="code">volatile</code>
+                  <code>volatile</code>
                 </li>
                 <li>
-                  <code class="code">while</code>
+                  <code>while</code>
                 </li>
                 <li>
-                  <code class="code">with</code>
+                  <code>with</code>
                 </li>
             </ul>
           </div>
           <div title="Arreglos" class="section">
-            <h2 class="title">
-              Arreglos
-            </h2>
+            <h2>Arreglos</h2>
             <p>
-			  Los arreglos (en ingl&eacute;s <span class="emphasis"><em>arrays</em></span>) son listas de valores con &iacute;ndice-cero (en ingl&eacute;s <span class="emphasis"><em>zero-index</em></span>), es decir, que el primer elemento del arreglo est&aacute; en el &iacute;ndice 0. &eacute;stos son una forma pr&aacute;ctica de almacenar un conjunto de datos relacionados (como cadenas de caracteres), aunque en realidad, un arreglo puede incluir m&uacute;ltiples tipos de datos, incluso otros arreglos.
+			  Los arreglos (en ingl&eacute;s <em>arrays</em>) son listas de valores con &iacute;ndice-cero (en ingl&eacute;s <em>zero-index</em>), es decir, que el primer elemento del arreglo est&aacute; en el &iacute;ndice 0. &Eacute;stos son una forma pr&aacute;ctica de almacenar un conjunto de datos relacionados (como cadenas de caracteres), aunque en realidad, un arreglo puede incluir m&uacute;ltiples tipos de datos, incluso otros arreglos.
             </p>
             <div class="example">
               <p class="title">
@@ -881,9 +837,7 @@ var mySplit = myString.split('');  // [ 'h', 'e', 'l', 'l', 'o' ]
               </div>
             </div>
           </div>
-          <h2 class="title">
-            Objetos
-          </h2>
+          <h2>Objetos</h2>
           <p>
             Los objetos son elementos que pueden contener cero o m&aacute;s conjuntos de pares de nombres claves y valores asociados a dicho objeto. Los nombres claves pueden ser cualquier palabra &oacute; n&uacute;mero v&aacute;lido. El valor puede ser cualquier tipo de valor: un n&uacute;mero, una cadena, un arreglo, una funci&oacute;n, incluso otro objeto.
           </p>
@@ -913,7 +867,7 @@ console.log(myObject.myName);   // se llama a la propiedad myName, la cual muest
             </div>
           </div>
           <div class="note">
-          <h3 class="title">
+          <h3>
             Nota
           </h3>
           <p>
@@ -927,13 +881,11 @@ var myObject = {
 };
 </pre>
           <p>
-            Los objetos literales pueden ser muy &uacute;tiles para la organizaci&oacute;n del c&oacute;digo, para m&aacute;s informaci&oacute;n puede leer el art&iacute;culo (en ingl&eacute;s) <a href="http://blog.rebeccamurphey.com/2009/10/15/using-objects-to-organize-your-code/" class="ulink">Using Objects to Organize Your Code</a> por Rebecca Murphey.
+            Los objetos literales pueden ser muy &uacute;tiles para la organizaci&oacute;n del c&oacute;digo, para m&aacute;s informaci&oacute;n puede leer el art&iacute;culo (en ingl&eacute;s) <a href="http://blog.rebeccamurphey.com/2009/10/15/using-objects-to-organize-your-code/">Using Objects to Organize Your Code</a> por Rebecca Murphey.
           </p>
           </div>
           <div title="Funciones" class="section">
-            <h2 class="title">
-              Funciones
-            </h2>
+            <h2>Funciones</h2>
             <p>
               Las funciones contienen bloques de c&oacute;digo que se ejecutaran repetidamente. A las mismas se le pueden pasar argumentos, y opcionalmente la funci&oacute;n puede devolver un valor.
             </p>
@@ -961,14 +913,12 @@ var foo = function() { /* hacer algo */ }
               </div>
             </div>
             <p class="remark">
-			  <i><span class="remark">Es preferible el m&eacute;todo de funci&oacute;n nombrada debido a algunas</span></i> <i><a href="http://yura.thinkweb2.com/named-function-expressions/" class="ulink">profundas razones t&eacute;cnicas</a>. Igualmente, es probable encontrar a los dos m&eacute;todos cuando se revise c&oacute;digo JavaScript.</i>
+			  <i><span class="remark">Es preferible el m&eacute;todo de funci&oacute;n nombrada debido a algunas</span></i> <i><a href="http://yura.thinkweb2.com/named-function-expressions/">profundas razones t&eacute;cnicas</a>. Igualmente, es probable encontrar a los dos m&eacute;todos cuando se revise c&oacute;digo JavaScript.</i>
             </p>
             <div title="Utilizaci&oacute;n de Funciones" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Utilizaci&oacute;n de Funciones
                 </h3>
-              </div>
               <div class="example">
                 <p class="title">
                   <b>Una funci&oacute;n simple</b>
@@ -1019,11 +969,9 @@ greeting();  // se muestra en la consola 'Hello, Rebecca'
               </div>
             </div>
             <div title="Self-Executing Anonymous Functions" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Funciones An&oacute;nimas Autoejecutables
                 </h3>
-              </div>
               <p>
 				Un patr&oacute;n com&uacute;n en JavaScript son las funciones an&oacute;nimas autoejecutables. Este patr&oacute;n consiste en crear una expresi&oacute;n de funci&oacute;n e inmediatamente ejecutarla. El mismo es muy &uacute;til para casos en que no se desea intervenir espacios de nombres globales, debido a que ninguna variable declarada dentro de la funci&oacute;n es visible desde afuera.
               </p>
@@ -1044,13 +992,11 @@ console.log(foo);   // indefinido (undefined)
               </div>
             </div>
             <div title="Funciones como Argumentos" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Funciones como Argumentos
                 </h3>
-              </div>
               <p>
-				En JavaScript, las funciones son "ciudadanos de primera clase" &mdash pueden ser asignadas a variables o pasadas a otras funciones como argumentos. En jQuery, pasar funciones como argumentos es una pr&aacute;ctica muy com&uacute;n.
+				En JavaScript, las funciones son "ciudadanos de primera clase" &mdash; pueden ser asignadas a variables o pasadas a otras funciones como argumentos. En jQuery, pasar funciones como argumentos es una pr&aacute;ctica muy com&uacute;n.
               </p>
               <div class="example">
                 <p class="title">
@@ -1089,15 +1035,13 @@ myFn(myOtherFn);   // muestra en la consola 'hello world'
             </div>
           </div>
           <div title="Determinaci&oacute;n del Tipo de Variable" class="section">
-            <h2 class="title">
-              Determinaci&oacute;n del Tipo de Variable
-            </h2>
+            <h2>Determinaci&oacute;n del Tipo de Variable</h2>
             <p>
-			  JavaScript ofrece una manera de poder comprobar el "tipo" (en ingl&eacute;s <span class="emphasis"><em>type</em></span>) de una variable. 
+			  JavaScript ofrece una manera de poder comprobar el "tipo" (en ingl&eacute;s <em>type</em>) de una variable. 
 			  Sin embargo, el resultado puede ser confuso &mdash; por ejemplo, el tipo de un arreglo es "object".
             </p>
             <p>
-			  Por eso, es una pr&aacute;ctica com&uacute;n utilizar el operador <code class="code">typeof</code> cuando se trata de determinar el tipo de un valor espec&iacute;fico.
+			  Por eso, es una pr&aacute;ctica com&uacute;n utilizar el operador <code>typeof</code> cuando se trata de determinar el tipo de un valor espec&iacute;fico.
             </p>
             <div class="example">
               <p class="title">
@@ -1145,21 +1089,19 @@ if (Object.prototype.toString.call(myArray) === '[object Array]') {
               jQuery ofrece m&eacute;todos para ayudar a determinar el tipo de un determinado valor. Estos m&eacute;todos ser&aacute;n vistos m&aacute;s adelante.
             </p>
           </div>
-          <h2 class="title">
-            La palabra clave <code class="code">this</code>
-          </h2>
+          <h2>La palabra clave <code>this</code></h2>
           <p>
-            En JavaScript, as&iacute; como en la mayor&iacute;a de los lenguajes de programaci&oacute;n orientados a objetos, <code class="code">this</code> es una palabra clave especial que hace referencia al objeto en donde el m&eacute;todo est&aacute; siendo invocado. El valor de <code class="code">this</code> es determinado utilizando una serie de simples pasos:
+            En JavaScript, as&iacute; como en la mayor&iacute;a de los lenguajes de programaci&oacute;n orientados a objetos, <code>this</code> es una palabra clave especial que hace referencia al objeto en donde el m&eacute;todo est&aacute; siendo invocado. El valor de <code>this</code> es determinado utilizando una serie de simples pasos:
           </p>
           <div class="orderedlist">
             <ol class="orderedlist">
-              <li>Si la funci&oacute;n es invocada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/call" class="ulink">Function.call</a> &oacute; <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply" class="ulink">Function.apply</a>, <code class="code">this</code> tendr&aacute; el valor del primer argumento pasado al m&eacute;todo. Si el argumento es nulo (<span class="emphasis"><em>null</em></span>) &oacute; indefinido (<span class="emphasis"><em>undefined</em></span>), <code class="code">this</code> har&aacute; referencia el objeto global (el objeto <code class="code">window</code>);
+              <li>Si la funci&oacute;n es invocada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/call">Function.call</a> &oacute; <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply">Function.apply</a>, <code>this</code> tendr&aacute; el valor del primer argumento pasado al m&eacute;todo. Si el argumento es nulo (<em>null</em>) &oacute; indefinido (<em>undefined</em>), <code>this</code> har&aacute; referencia el objeto global (el objeto <code>window</code>);
               </li>
-              <li>Si la funci&oacute;n a invocar es creada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/bind" class="ulink">Function.bind</a>, <code class="code">this</code> ser&aacute; el primer argumento que es pasado a la funci&oacute;n en el momento en que se la crea;
+              <li>Si la funci&oacute;n a invocar es creada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/bind">Function.bind</a>, <code>this</code> ser&aacute; el primer argumento que es pasado a la funci&oacute;n en el momento en que se la crea;
               </li>
-              <li>Si la funci&oacute;n es invocada como un m&eacute;todo de un objeto, <code class="code">this</code> referenciar&aacute; a dicho objeto;
+              <li>Si la funci&oacute;n es invocada como un m&eacute;todo de un objeto, <code>this</code> referenciar&aacute; a dicho objeto;
               </li>
-              <li>De lo contrario, si la funci&oacute;n es invocada como una funci&oacute;n independiente, no unida a alg&uacute;n objeto, <code class="code">this</code> referenciar&aacute; al objeto global.
+              <li>De lo contrario, si la funci&oacute;n es invocada como una funci&oacute;n independiente, no unida a alg&uacute;n objeto, <code>this</code> referenciar&aacute; al objeto global.
               </li>
             </ol>
           </div>
@@ -1239,11 +1181,11 @@ secondObject.sayHello();  // registra 'Hola, mi nombre es Colin'
             </div>
           </div>
           <div class="note">
-          <h3 class="title">
+          <h3>
             Nota
           </h3>
           <p>
-            En algunas oportunidades, cuando se invoca una funci&oacute;n que se encuentra dentro de un espacio de nombres (en ingl&eacute;s <span class="emphasis"><em>namespace</em></span>) amplio, puede ser una tentaci&oacute;n guardar la referencia a la funci&oacute;n actual en una variable m&aacute;s corta y accesible. Sin embargo, es importante no realizarlo en instancias de m&eacute;todos, ya que puede llevar a la ejecuci&oacute;n de c&oacute;digo incorrecto. Por ejemplo:
+            En algunas oportunidades, cuando se invoca una funci&oacute;n que se encuentra dentro de un espacio de nombres (en ingl&eacute;s <em>namespace</em>) amplio, puede ser una tentaci&oacute;n guardar la referencia a la funci&oacute;n actual en una variable m&aacute;s corta y accesible. Sin embargo, es importante no realizarlo en instancias de m&eacute;todos, ya que puede llevar a la ejecuci&oacute;n de c&oacute;digo incorrecto. Por ejemplo:
           </p>
           <pre class="brush: js">
 var myNamespace = {
@@ -1280,18 +1222,16 @@ obj.sayHello();  // registra 'Hola, mi nombre es Rebecca'
 </pre>
           </div>
           <div title="Alcance" class="section">
-            <h2 class="title">
-              Alcance
-            </h2>
+            <h2>Alcance</h2>
             <p>
-			  El "alcance" (en ingl&eacute;s <span class="emphasis"><em>scope</em></span>) se refiere a las variables que est&aacute;n disponibles en un bloque de c&oacute;digo en un tiempo determinado. La falta de comprensi&oacute;n de este concepto puede llevar a una frustrante experiencia de depuraci&oacute;n.
+			  El "alcance" (en ingl&eacute;s <em>scope</em>) se refiere a las variables que est&aacute;n disponibles en un bloque de c&oacute;digo en un tiempo determinado. La falta de comprensi&oacute;n de este concepto puede llevar a una frustrante experiencia de depuraci&oacute;n.
             </p>
             <p>
 			  Cuando una variable es declarada dentro de una funci&oacute;n utilizando la palabra clave <code
-              class="code">var</code>, &eacute;sta &uacute;nicamente esta disponible para el c&oacute;digo dentro de la funci&oacute;n &mdash; todo el c&oacute;digo fuera de dicha funci&oacute;n no puede acceder a la variable. Por otro lado, las funciones definidas <span class="emphasis"><em>dentro</em></span> de la funci&oacute;n <span class="emphasis"><em>podr&aacute;n</em></span> acceder a la variable declarada.
+              class="code">var</code>, &eacute;sta &uacute;nicamente esta disponible para el c&oacute;digo dentro de la funci&oacute;n &mdash; todo el c&oacute;digo fuera de dicha funci&oacute;n no puede acceder a la variable. Por otro lado, las funciones definidas <em>dentro</em> de la funci&oacute;n <em>podr&aacute;n</em> acceder a la variable declarada.
             </p>
             <p>
-			  Las variables que son declaradas dentro de la funci&oacute;n sin la palabra clave <code class="code">var</code> no quedan dentro del &aacute;mbito de la misma funci&oacute;n &mdash; JavaScript buscar&aacute; el lugar en donde la variable fue previamente declarada, y en caso de no haber sido declarada, es definida dentro del alcance global, lo cual puede ocasionar consecuencias inesperadas;
+			  Las variables que son declaradas dentro de la funci&oacute;n sin la palabra clave <code>var</code> no quedan dentro del &aacute;mbito de la misma funci&oacute;n &mdash; JavaScript buscar&aacute; el lugar en donde la variable fue previamente declarada, y en caso de no haber sido declarada, es definida dentro del alcance global, lo cual puede ocasionar consecuencias inesperadas;
             </p>
             <div class="example">
               <p class="title">
@@ -1395,18 +1335,16 @@ bim();  // bim no esta definida para ser accesible fuera de la funci&oacute;n an
             </div>
           </div>
           <div title="Clausuras" class="section">
-            <h2 class="title">
-              Clausuras
-            </h2>
+            <h2>Clausuras</h2>
             <p>
-			  Las clausuras (en ingl&eacute;s <span class="emphasis"><em>closures</em></span>) son una extensi&oacute;n del concepto de alcance (<span class="emphasis"><em>scope</em></span>) — funciones que tienen acceso a las variables que est&aacute;n disponibles dentro del &aacute;mbito en donde se cre&oacute; la funci&oacute;n. Si este concepto es confuso, no debe preocuparse: se entiende mejor a trav&eacute;s de ejemplos.
+			  Las clausuras (en ingl&eacute;s <em>closures</em>) son una extensi&oacute;n del concepto de alcance (<em>scope</em>) — funciones que tienen acceso a las variables que est&aacute;n disponibles dentro del &aacute;mbito en donde se cre&oacute; la funci&oacute;n. Si este concepto es confuso, no debe preocuparse: se entiende mejor a trav&eacute;s de ejemplos.
             </p>
             <p>
 			  En el ejemplo 2.47 se muestra la forma en que funciones tienen acceso para cambiar el valor de las variables. El mismo comportamiento sucede en funciones creadas dentro de bucles &mdash; la funci&oacute;n "observa" el cambio en la variable, incluso despu&eacute;s de que la funci&oacute;n sea definida, resultando que en todos los clicks aparezca una ventana de alerta mostrando el valor 5.
             </p>
             <div class="example">
               <p class="title">
-                <b>¿C&oacute;mo establecer el valor de <code class="code">i</code>?</b>
+                <b>¿C&oacute;mo establecer el valor de <code>i</code>?</b>
               </p>
               <div class="example-contents">
                 <pre class="brush: js">
@@ -1422,7 +1360,7 @@ for (var i=0; i&lt;5; i++) {
             </div>
             <div class="example">
               <p class="title">
-                <b>Establecer el valor de <code class="code">i</code> utilizando una clausura</b>
+                <b>Establecer el valor de <code>i</code> utilizando una clausura</b>
               </p>
               <div class="example-contents">
                 <pre class="brush: js">
@@ -1438,7 +1376,7 @@ for (var i=0; i&lt;5; i++) {
               </div>
             </div>
             <p>
-              Las clausuras tambi&eacute;n pueden ser utilizadas para resolver problemas con la palabra clave <code class="code">this</code>, la cual es &uacute;nica en cada alcance.
+              Las clausuras tambi&eacute;n pueden ser utilizadas para resolver problemas con la palabra clave <code>this</code>, la cual es &uacute;nica en cada alcance.
             </p>
             <div class="example">
               <p class="title">
@@ -1471,7 +1409,7 @@ outerObj.outerFunction();
               </div>
             </div>
             <p>
-              Este mecanismo puede ser &uacute;til cuando trabaje con funciones de devoluci&oacute;n de llamadas (en ingl&eacute;s <span class="emphasis"><em>callbacks</em></span>). Sin embargo, en estos casos, es preferible que utilice <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/bind" class="ulink">Function.bind</a> ya que evitar&aacute; cualquier sobrecarga asociada con el alcance (<span class="emphasis"><em>scope</em></span>).
+              Este mecanismo puede ser &uacute;til cuando trabaje con funciones de devoluci&oacute;n de llamadas (en ingl&eacute;s <em>callbacks</em>). Sin embargo, en estos casos, es preferible que utilice <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/bind">Function.bind</a> ya que evitar&aacute; cualquier sobrecarga asociada con el alcance (<em>scope</em>).
             </p>
           </div>
         </div>

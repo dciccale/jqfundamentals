@@ -1,16 +1,8 @@
         <div id="capitulo-4" title="El n&uacute;cleo de jQuery" class="chapter">
-          <div class="titlepage">
-            <div>
-              <div>
-                <h2 class="title">
-                  El n&uacute;cleo de jQuery
-                </h2>
-              </div>
-            </div>
-          </div>
+			<h2 class="title">El n&uacute;cleo de jQuery</h2>
           <div title="$ vs $()" class="section">
-            <h2 class="title">
-              <code class="code">$</code> vs <code class="code">$()</code>
+            <h2>
+              <code>$</code> vs <code>$()</code>
             </h2>
             <p>
               Hasta ahora, se ha tratado completamente con m&eacute;todos que se llaman desde el objeto jQuery. Por ejemplo:
@@ -19,7 +11,7 @@
 $('h1').remove();
 </pre>
             <p>
-              Dichos m&eacute;todos son parte del espacio de nombres (en ingl&eacute;s <span class="emphasis"><em>namespace</em></span>) <code class="code">$.fn</code>, o del prototipo (en ingl&eacute;s <span class="emphasis"><em>prototype</em></span>) de jQuery, y son considerados como m&eacute;todos del objeto jQuery.
+              Dichos m&eacute;todos son parte del espacio de nombres (en ingl&eacute;s <em>namespace</em>) <code>$.fn</code>, o del prototipo (en ingl&eacute;s <em>prototype</em>) de jQuery, y son considerados como m&eacute;todos del objeto jQuery.
             </p>
             <p>
               Sin embargo, existen m&eacute;todos que son parte del espacio de nombres de $ y se consideran como m&eacute;todos del n&uacute;cleo de jQuery.
@@ -28,21 +20,21 @@ $('h1').remove();
               Estas distinciones pueden ser bastantes confusas para usuarios nuevos . Para evitar la confusi&oacute;n, debe recordar estos dos puntos:
             </p>
             <ul>
-              <li>Los m&eacute;todos utilizados en selecciones se encuentran dentro del espacio de nombres <code class="code">$.fn</code>, y autom&aacute;ticamente reciben y devuelven una selecci&oacute;n en s&iacute;.
+              <li>Los m&eacute;todos utilizados en selecciones se encuentran dentro del espacio de nombres <code>$.fn</code>, y autom&aacute;ticamente reciben y devuelven una selecci&oacute;n en s&iacute;.
               </li>
-              <li>M&eacute;todos en el espacio de nombres <code class="code">$</code> son generalmente m&eacute;todos para diferentes utilidades, no trabajan con selecciones, no se les pasa ning&uacute;n argumento y el valor que devuelven puede variar.
+              <li>M&eacute;todos en el espacio de nombres <code>$</code> son generalmente m&eacute;todos para diferentes utilidades, no trabajan con selecciones, no se les pasa ning&uacute;n argumento y el valor que devuelven puede variar.
               </li>
             </ul>
             <p>
-              Existen algunos casos en donde m&eacute;todos del objeto y del n&uacute;cleo poseen los mismos nombres, como sucede con <code class="code">$.each</code> y <code class="code">$.fn.each</code>. En estos casos, debe ser cuidadoso de leer bien la documentaci&oacute;n para saber que objeto utilizar correctamente.
+              Existen algunos casos en donde m&eacute;todos del objeto y del n&uacute;cleo poseen los mismos nombres, como sucede con <code>$.each</code> y <code>$.fn.each</code>. En estos casos, debe ser cuidadoso de leer bien la documentaci&oacute;n para saber que objeto utilizar correctamente.
             </p>
           </div>
           <div title="M&eacute;todos Utilitarios" class="section">
-            <h2 class="title">
+            <h2>
               M&eacute;todos Utilitarios
             </h2>
             <p>
-              jQuery ofrece varios m&eacute;todos utilitarios dentro del espacio de nombres <code class="code">$</code>. Estos m&eacute;todos son de gran ayuda para llevar a cabo tareas rutinarias de programaci&oacute;n. A continuaci&oacute;n se muestran algunos ejemplos, para una completa documentaci&oacute;n sobre ellos, visite <a href="http://api.jquery.com/category/utilities/" class="ulink">http://api.jquery.com/category/utilities/</a>.
+              jQuery ofrece varios m&eacute;todos utilitarios dentro del espacio de nombres <code>$</code>. Estos m&eacute;todos son de gran ayuda para llevar a cabo tareas rutinarias de programaci&oacute;n. A continuaci&oacute;n se muestran algunos ejemplos, para una completa documentaci&oacute;n sobre ellos, visite <a href="http://api.jquery.com/category/utilities/">http://api.jquery.com/category/utilities/</a>.
             </p>
             <div class="variablelist">
               <dl>
@@ -75,11 +67,11 @@ $.each({ foo : 'bar', baz : 'bim' }, function(k, v) {
 });
 </pre>
                   <div class="note">
-                  <h3 class="title">
+                  <h3>
                     Nota
                   </h3>
                   <p>
-                    Como se dijo antes, existe un m&eacute;todo llamado <code class="code">$.fn.each</code>, el cual interact&uacute;a en una selecci&oacute;n de elementos.
+                    Como se dijo antes, existe un m&eacute;todo llamado <code>$.fn.each</code>, el cual interact&uacute;a en una selecci&oacute;n de elementos.
                   </p>
                   </div>
                 </dd>
@@ -114,7 +106,7 @@ console.log(firstObject.foo); // 'baz'
 console.log(newObject.foo);   // 'baz'
 </pre>
                   <p>
-                    Si no se desea cambiar las propiedades de ninguno de los objetos que se utilizan en <code class="code">$.extend</code>, se debe incluir un objeto vac&iacute;o como primer argumento.
+                    Si no se desea cambiar las propiedades de ninguno de los objetos que se utilizan en <code>$.extend</code>, se debe incluir un objeto vac&iacute;o como primer argumento.
                   </p>
                   <pre class="brush: js">
 var firstObject = { foo : 'bar', a : 'b' };
@@ -130,7 +122,7 @@ console.log(newObject.foo);   // 'baz'
                 </dt>
                 <dd>
                   <p>
-                    Devuelve una funci&oacute;n que siempre se ejecutar&aacute; en el alcance (<span class="emphasis"><em>scope</em></span>) provisto — en otras palabras, establece el significado de <span class="emphasis"><em>this</em></span> (incluido dentro de la funci&oacute;n) como el segundo argumento.
+                    Devuelve una funci&oacute;n que siempre se ejecutar&aacute; en el alcance (<em>scope</em>) provisto — en otras palabras, establece el significado de <em>this</em> (incluido dentro de la funci&oacute;n) como el segundo argumento.
                   </p>
                   <pre class="brush: js">
 var myFunction = function() { console.log(this); };
@@ -159,7 +151,7 @@ $('#foo').click($.proxy(myObject, 'myFn')); // registra myObject
             </div>
           </div>
           <div title="Comprobaci&oacute;n de Tipos" class="section">
-            <h2 class="title">
+            <h2>
               Comprobaci&oacute;n de Tipos
             </h2>
             <p>
@@ -191,11 +183,11 @@ jQuery.isArray(myValue); // verdadero (true)
             </div>
           </div>
           <div title="El M&eacute;todo Data" class="section">
-            <h2 class="title">
+            <h2>
               El M&eacute;todo Data
             </h2>
             <p>
-              A menudo encontrar&aacute; que existe informaci&oacute;n acerca de un elemento que necesita guardar. En JavaScript es posible hacerlo a&ntilde;adiendo propiedades al DOM del elemento, pero esta pr&aacute;ctica conlleva enfrentarse a p&eacute;rdidas de memoria (en ingl&eacute;s <span class="emphasis"><em>memory leaks</em></span>) en algunos navegadores. jQuery ofrece una manera sencilla para poder guardar informaci&oacute;n relacionada a un elemento, y la misma biblioteca se ocupa de manejar los problemas que pueden surgir por falta de memoria.
+              A menudo encontrar&aacute; que existe informaci&oacute;n acerca de un elemento que necesita guardar. En JavaScript es posible hacerlo a&ntilde;adiendo propiedades al DOM del elemento, pero esta pr&aacute;ctica conlleva enfrentarse a p&eacute;rdidas de memoria (en ingl&eacute;s <em>memory leaks</em>) en algunos navegadores. jQuery ofrece una manera sencilla para poder guardar informaci&oacute;n relacionada a un elemento, y la misma biblioteca se ocupa de manejar los problemas que pueden surgir por falta de memoria.
             </p>
             <div class="example">
               <p class="title">
@@ -209,14 +201,14 @@ $('#myDiv').data('keyName'); // { foo : 'bar' }
               </div>
             </div>
             <p>
-              A trav&eacute;s del m&eacute;todo <code class="code">$.fn.data</code> es posible guardar cualquier tipo de informaci&oacute;n sobre un elemento, y es dif&iacute;cil exagerar la importancia de este concepto cuando se est&aacute; desarrollando una aplicaci&oacute;n compleja.
+              A trav&eacute;s del m&eacute;todo <code>$.fn.data</code> es posible guardar cualquier tipo de informaci&oacute;n sobre un elemento, y es dif&iacute;cil exagerar la importancia de este concepto cuando se est&aacute; desarrollando una aplicaci&oacute;n compleja.
             </p>
             <p>
-              Por ejemplo, si desea establecer una relaci&oacute;n entre el &iacute;tem de una lista y el div que hay dentro de este &iacute;tem, es posible hacerlo cada vez que se interact&uacute;a con el &iacute;tem, pero una mejor soluci&oacute;n es hacerlo una sola vez, guardando un puntero al div utilizando el m&eacute;todo <code class="code">$.fn.data</code>:
+              Por ejemplo, si desea establecer una relaci&oacute;n entre el &iacute;tem de una lista y el div que hay dentro de este &iacute;tem, es posible hacerlo cada vez que se interact&uacute;a con el &iacute;tem, pero una mejor soluci&oacute;n es hacerlo una sola vez, guardando un puntero al div utilizando el m&eacute;todo <code>$.fn.data</code>:
             </p>
             <div class="example">
               <p class="title">
-                <b>Establecer una relaci&oacute;n entre elementos utilizando el m&eacute;todo <code class="code">$.fn.data</code></b>
+                <b>Establecer una relaci&oacute;n entre elementos utilizando el m&eacute;todo <code>$.fn.data</code></b>
               </p>
               <div class="example-contents">
                 <pre class="brush: js">
@@ -237,31 +229,31 @@ $firstLi.data('contentDiv').html('nuevo contenido');
             </p>
           </div>
           <div title="Detecci&oacute;n de Navegadores y Caracter&iacute;sticas" class="section">
-            <h2 class="title">
+            <h2>
               Detecci&oacute;n de Navegadores y Caracter&iacute;sticas
             </h2>
             <p>
               M&aacute;s all&aacute; que jQuery elimine la mayor&iacute;a de las peculiaridades de JavaScript entre cada navegador, existen ocasiones en que se necesita ejecutar c&oacute;digo en un navegador espec&iacute;fico.
             </p>
             <p>
-              Para este tipo de situaciones, jQuery ofrece el objeto <code class="code">$.support</code> y <code class="code">$.browser</code> (este &uacute;ltimo en desuso). Una completa documentaci&oacute;n sobre estos objetos puede encontrarla en <a href="http://api.jquery.com/jQuery.support/" class="ulink">http://api.jquery.com/jQuery.support/</a> y <a href="http://api.jquery.com/jQuery.browser/" class="ulink">http://api.jquery.com/jQuery.browser/</a>
+              Para este tipo de situaciones, jQuery ofrece el objeto <code>$.support</code> y <code>$.browser</code> (este &uacute;ltimo en desuso). Una completa documentaci&oacute;n sobre estos objetos puede encontrarla en <a href="http://api.jquery.com/jQuery.support/">http://api.jquery.com/jQuery.support/</a> y <a href="http://api.jquery.com/jQuery.browser/">http://api.jquery.com/jQuery.browser/</a>
             </p>
             <p>
-              El objetivo de <code class="code">$.support</code> es determinar qu&eacute; caracter&iacute;sticas soporta el navegador web.
+              El objetivo de <code>$.support</code> es determinar qu&eacute; caracter&iacute;sticas soporta el navegador web.
             </p>
             <p>
-              El objeto <code class="code">$.browser</code> permite detectar el tipo de navegador y su versi&oacute;n. Dicho objeto est&aacute; en desuso (aunque en el corto plazo no est&aacute; planificada su eliminaci&oacute;n del n&uacute;cleo de la biblioteca) y se recomienda utilizar al objeto <code class="code">$.support</code> para estos prop&oacute;sitos.
+              El objeto <code>$.browser</code> permite detectar el tipo de navegador y su versi&oacute;n. Dicho objeto est&aacute; en desuso (aunque en el corto plazo no est&aacute; planificada su eliminaci&oacute;n del n&uacute;cleo de la biblioteca) y se recomienda utilizar al objeto <code>$.support</code> para estos prop&oacute;sitos.
             </p>
           </div>
           <div title="Evitar Conflictos con Otras Bibliotecas JavaScript" class="section">
-            <h2 class="title">
+            <h2>
               Evitar Conflictos con Otras Bibliotecas JavaScript
             </h2>
             <p>
-              Si esta utilizando jQuery en conjunto con otras bibliotecas JavaScript, las cuales tambi&eacute;n utilizan la variable <code class="code">$</code>, pueden llegar a ocurrir una serie de errores. Para poder solucionarlos, es necesario poner a jQuery en su modo "no-conflicto". Esto se debe realizar inmediatamente despu&eacute;s que jQuery se cargue en la p&aacute;gina y antes del c&oacute;digo que se va a ejecutar.
+              Si esta utilizando jQuery en conjunto con otras bibliotecas JavaScript, las cuales tambi&eacute;n utilizan la variable <code>$</code>, pueden llegar a ocurrir una serie de errores. Para poder solucionarlos, es necesario poner a jQuery en su modo "no-conflicto". Esto se debe realizar inmediatamente despu&eacute;s que jQuery se cargue en la p&aacute;gina y antes del c&oacute;digo que se va a ejecutar.
             </p>
             <p>
-              Cuando se pone a jQuery en modo "no-conflicto", la biblioteca ofrece la opci&oacute;n de asignar un nombre para reemplazar a la variable <code class="code">$</code>.
+              Cuando se pone a jQuery en modo "no-conflicto", la biblioteca ofrece la opci&oacute;n de asignar un nombre para reemplazar a la variable <code>$</code>.
             </p>
             <div class="example">
               <p class="title">
@@ -276,7 +268,7 @@ $firstLi.data('contentDiv').html('nuevo contenido');
               </div>
             </div>
             <p>
-              Tambi&eacute;n es posible seguir utilizando <code class="code">$</code> conteniendo el c&oacute;digo en una funci&oacute;n an&oacute;nima autoejecutable. &Eacute;ste es un patr&oacute;n est&aacute;ndar para la creaci&oacute;n de extensiones para la biblioteca, ya que <code class="code">$</code> queda encerrada dentro del alcance de la misma funci&oacute;n an&oacute;nima.
+              Tambi&eacute;n es posible seguir utilizando <code>$</code> conteniendo el c&oacute;digo en una funci&oacute;n an&oacute;nima autoejecutable. &Eacute;ste es un patr&oacute;n est&aacute;ndar para la creaci&oacute;n de extensiones para la biblioteca, ya que <code>$</code> queda encerrada dentro del alcance de la misma funci&oacute;n an&oacute;nima.
             </p>
             <div class="example">
               <p class="title">

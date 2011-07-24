@@ -1,17 +1,8 @@
         <div id="capitulo-10" title="Organizaci&oacute;n del C&oacute;digo" class="chapter">
-        
-          <div class="titlepage">
-            <div>
-              <div>
-                <h2 class="title">
-                  Organizaci&oacute;n del C&oacute;digo
-                </h2>
-              </div>
-            </div>
-          </div>
+			<h2 class="title">Organizaci&oacute;n del C&oacute;digo</h2>
           
           <div title="Introducci&oacute;n" class="section">
-            <h2 class="title">
+            <h2>
               Introducci&oacute;n
             </h2>
             <p>
@@ -19,17 +10,15 @@
             </p>
           </div>
             
-          <div title="Conceptos Claves" class="section">
-              <div class="titlepage">
-                <h3 class="title">
-                  Conceptos Claves
+          <div title="Conceptos Clave" class="section">
+                <h3>
+                  Conceptos Clave
                 </h3>
-              </div>
               <p>
-                Antes de comenzar con los patrones de organizaci&oacute;n de c&oacute;digo, es importante entender algunos conceptos claves.
+                Antes de comenzar con los patrones de organizaci&oacute;n de c&oacute;digo, es importante entender algunos conceptos clave.
               </p>
               <ul>
-                <li>El c&oacute;digo debe estar divido en unidades funcionales — m&oacute;dulos, servicios, etc. Y se debe evitar la tentaci&oacute;n de tener todo en un &uacute;nico bloque <code class="code">$(document).ready()</code>. Este concepto se conoce como encapsulaci&oacute;n.
+                <li>El c&oacute;digo debe estar divido en unidades funcionales — m&oacute;dulos, servicios, etc. Y se debe evitar la tentaci&oacute;n de tener todo en un &uacute;nico bloque <code>$(document).ready()</code>. Este concepto se conoce como encapsulaci&oacute;n.
                 </li>
                 <li>
                   <p>
@@ -43,7 +32,7 @@
                 </li>
                 <li>
                   <p>
-                    Las unidades de funcionalidad deben tener una articulaci&oacute;n flexible (en ingl&eacute;s <a href="http://en.wikipedia.org/wiki/Loose_coupling" class="ulink">loosely coupled</a>) — una unidad de funcionalidad debe ser capaz de existir por si mismo y la comunicaci&oacute;n con otras unidades debe ser a trav&eacute;s de un sistema de mensajes como eventos personalizados o pub/sub. Y siempre que sea posible, mantener alejada la comunicaci&oacute;n directa entre unidades funcionales.
+                    Las unidades de funcionalidad deben tener una articulaci&oacute;n flexible (en ingl&eacute;s <a href="http://en.wikipedia.org/wiki/Loose_coupling">loosely coupled</a>) — una unidad de funcionalidad debe ser capaz de existir por si mismo y la comunicaci&oacute;n con otras unidades debe ser a trav&eacute;s de un sistema de mensajes como eventos personalizados o pub/sub. Y siempre que sea posible, mantener alejada la comunicaci&oacute;n directa entre unidades funcionales.
                   </p>
                 </li>
               </ul>
@@ -53,7 +42,7 @@
           </div>
           
           <div title="Encapsulaci&oacute;n" class="section">
-            <h2 class="title">
+            <h2>
               Encapsulaci&oacute;n
             </h2>
             <p>
@@ -62,11 +51,9 @@
           </div>
            
           <div title="El Objeto Literal" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   El Objeto Literal
                 </h3>
-              </div>
               <p>
                 Un objeto literal es tal vez la manera m&aacute;s simple de encapsular c&oacute;digo relacionado. Este no ofrece ninguna privacidad para propiedades o m&eacute;todos, pero es &uacute;til para eliminar funciones an&oacute;nimas, centralizar opciones de configuraci&oacute;n, y facilitar el camino para la reutilizaci&oacute;n y refactorizaci&oacute;n.
               </p>
@@ -226,15 +213,13 @@ $(document).ready(myFeature.init);
                 </li>
               </ul>
               <p>
-                Por sus caracter&iacute;sticas, la utilizaci&oacute;n de objetos literales permiten una clara mejora para tramos largos de c&oacute;digo insertados en un bloque <code class="code">$(document).ready()</code>. Sin embargo, no son m&aacute;s avanzados que tener varias declaraciones de funciones dentro de un bloque <code class="code">$(document).ready()</code>.
+                Por sus caracter&iacute;sticas, la utilizaci&oacute;n de objetos literales permiten una clara mejora para tramos largos de c&oacute;digo insertados en un bloque <code>$(document).ready()</code>. Sin embargo, no son m&aacute;s avanzados que tener varias declaraciones de funciones dentro de un bloque <code>$(document).ready()</code>.
               </p>
             </div>
             <div title="El Patr&oacute;n Modular" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   El Patr&oacute;n Modular
                 </h3>
-              </div>
               <p>
                 El patr&oacute;n modular supera algunas limitaciones del objeto literal, ofreciendo privacidad para variables y funciones, exponiendo a su vez (si se lo desea) una API p&uacute;blica.
               </p>
@@ -276,13 +261,13 @@ feature.sayPrivateThing();
                 </div>
               </div>
               <p>
-                En el ejemplo, se autoejecuta una funci&oacute;n an&oacute;nima la cual devuelve un objeto. Dentro de la funci&oacute;n, se definen algunas variables. Debido a que ellas son definidas dentro de la funci&oacute;n, desde afuera no se tiene acceso a menos que se pongan dentro del objeto que se devuelve. Esto implica que ning&uacute;n c&oacute;digo fuera de la funci&oacute;n tiene acceso a la variable <code class="code">privateThing</code> o a la funci&oacute;n <code class="code">sayPrivateThing</code>. Sin embargo, <code class="code">sayPrivateThing</code> posee acceso a <code class="code">privateThing</code> y <code class="code">changePrivateThing</code> debido a estar definidos en el mismo alcance.
+                En el ejemplo, se autoejecuta una funci&oacute;n an&oacute;nima la cual devuelve un objeto. Dentro de la funci&oacute;n, se definen algunas variables. Debido a que ellas son definidas dentro de la funci&oacute;n, desde afuera no se tiene acceso a menos que se pongan dentro del objeto que se devuelve. Esto implica que ning&uacute;n c&oacute;digo fuera de la funci&oacute;n tiene acceso a la variable <code>privateThing</code> o a la funci&oacute;n <code>sayPrivateThing</code>. Sin embargo, <code>sayPrivateThing</code> posee acceso a <code>privateThing</code> y <code>changePrivateThing</code> debido a estar definidos en el mismo alcance.
               </p>
               <p>
                 El patr&oacute;n es poderoso debido a que permite tener variables y funciones privadas, exponiendo una API limitada consistente en devolver propiedades y m&eacute;todos de un objeto.
               </p>
               <p>
-                A continuaci&oacute;n se muestra una revisi&oacute;n del ejemplo visto anteriormente, con las mismas caracter&iacute;sticas, pero exponiendo un &uacute;nico m&eacute;todo p&uacute;blico del modulo, <code class="code">showItemByIndex()</code>.
+                A continuaci&oacute;n se muestra una revisi&oacute;n del ejemplo visto anteriormente, con las mismas caracter&iacute;sticas, pero exponiendo un &uacute;nico m&eacute;todo p&uacute;blico del modulo, <code>showItemByIndex()</code>.
               </p>
               <div class="example">
                 <p class="title">
@@ -350,15 +335,15 @@ $(document).ready(function() {
           </div>
           
           <div title="Gesti&oacute;n de Dependencias" class="section">
-          <h2 class="title">
+          <h2>
               Gesti&oacute;n de Dependencias
           </h2>
           <div class="note">
-          <h3 class="title">
+          <h3>
             Nota
           </h3>
           <p>
-            Esta secci&oacute;n esta basada en la excelente documentaci&oacute;n de RequireJS <a href="http://requirejs.org/docs/jquery.html" class="ulink">http://requirejs.org/docs/jquery.html</a> y es utilizada con el permiso de James Burke, autor de RequireJS.
+            Esta secci&oacute;n esta basada en la excelente documentaci&oacute;n de RequireJS <a href="http://requirejs.org/docs/jquery.html">http://requirejs.org/docs/jquery.html</a> y es utilizada con el permiso de James Burke, autor de RequireJS.
           </p>
           </div>
           <p>
@@ -373,22 +358,18 @@ $(document).ready(function() {
           </div>
           
           <div title="Obtener RequireJS" class="section">
-            <div class="titlepage">
-              <h3 class="title">
+			  <h3>
                 Obtener RequireJS
               </h3>
-            </div>
             <p>
-              La manera m&aacute;s f&aacute;cil de utilizar RequireJS con jQuery es descargando <a href="http://requirejs.org/docs/download.html" class="ulink">el paquete de jQuery con RequireJS</a> ya incorporado en &eacute;l. Este paquete excluye porciones de c&oacute;digo que duplican funciones de jQuery. Tambi&eacute;n es &uacute;til descargar <a href="http://requirejs.org/docs/release/0.11.0/jquery-require-sample.zip" class="ulink">un ejemplo de proyecto jQuery que utiliza RequireJS</a>.
+              La manera m&aacute;s f&aacute;cil de utilizar RequireJS con jQuery es descargando <a href="http://requirejs.org/docs/download.html">el paquete de jQuery con RequireJS</a> ya incorporado en &eacute;l. Este paquete excluye porciones de c&oacute;digo que duplican funciones de jQuery. Tambi&eacute;n es &uacute;til descargar <a href="http://requirejs.org/docs/release/0.11.0/jquery-require-sample.zip">un ejemplo de proyecto jQuery que utiliza RequireJS</a>.
             </p>
           </div>
           
          <div title="Utilizar RequireJS con jQuery" class="section">
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 Utilizar RequireJS con jQuery
               </h3>
-            </div>
             <p>
               Utilizar RequireJS es simple, tan solo es necesario incorporar en la p&aacute;gina la versi&oacute;n de jQuery que posee RequireJS incorporado y a continuaci&oacute;n solicitar los archivos de la aplicaci&oacute;n. El siguiente ejemplo asume que tanto jQuery como los otros archivos est&aacute;n dentro de la carpeta <code class="filename">scripts/</code>.
             </p>
@@ -413,7 +394,7 @@ $(document).ready(function() {
               </div>
             </div>
             <p>
-              La llamada a <code class="code">require(["app"])</code> le dice a RequireJS que cargue el archivo <code class="filename">scripts/app.js</code>. RequireJS cargar&aacute; cualquier dependencia pasada a <code class="code">require()</code> sin la extensi&oacute;n <code class="filename">.js</code> desde el mismo directorio que en que se encuentra el archivo <code class="filename">require-jquery.js</code>, aunque tambi&eacute;n es posible especificar la ruta de la siguiente forma:
+              La llamada a <code>require(["app"])</code> le dice a RequireJS que cargue el archivo <code class="filename">scripts/app.js</code>. RequireJS cargar&aacute; cualquier dependencia pasada a <code>require()</code> sin la extensi&oacute;n <code class="filename">.js</code> desde el mismo directorio que en que se encuentra el archivo <code class="filename">require-jquery.js</code>, aunque tambi&eacute;n es posible especificar la ruta de la siguiente forma:
             </p>
             <pre class="brush: js">
 &lt;script&gt;require(["scripts/app.js"]);&lt;/script&gt;
@@ -439,16 +420,14 @@ require(["jquery.alpha", "jquery.beta"], function() {
           </div>
           
           <div title="Crear M&oacute;dulos Reusables con RequireJS" class="section">
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 Crear M&oacute;dulos Reusables con RequireJS
               </h3>
-            </div>
             <p>
-              RequireJS hace que sea f&aacute;cil definir m&oacute;dulos reusables a trav&eacute;s de <code class="code">require.def()</code>. Un modulo RequireJS puede tener dependencias que pueden ser utilizadas para definir un m&oacute;dulo, adem&aacute;s de poder devolver un valor — un objeto, una funci&oacute;n, u otra cosa — que puede ser incluso utilizado otros m&oacute;dulos.
+              RequireJS hace que sea f&aacute;cil definir m&oacute;dulos reusables a trav&eacute;s de <code>require.def()</code>. Un modulo RequireJS puede tener dependencias que pueden ser utilizadas para definir un m&oacute;dulo, adem&aacute;s de poder devolver un valor — un objeto, una funci&oacute;n, u otra cosa — que puede ser incluso utilizado otros m&oacute;dulos.
             </p>
             <p>
-              Si el m&oacute;dulo no posee ninguna dependencia, tan solo se debe especificar el nombre como primer argumento de <code class="code">require.def()</code>. El segundo argumento es un objeto literal que define las propiedades del m&oacute;dulo. Por ejemplo:
+              Si el m&oacute;dulo no posee ninguna dependencia, tan solo se debe especificar el nombre como primer argumento de <code>require.def()</code>. El segundo argumento es un objeto literal que define las propiedades del m&oacute;dulo. Por ejemplo:
             </p>
             <div class="example">
               <p class="title">
@@ -469,7 +448,7 @@ require.def("my/simpleshirt",
                   El ejemplo debe ser guardado en el archivo my/simpleshirt.js.
                 </p>
                 <p>
-                  Si el modulo posee dependencias, es posible especificarlas en el segundo argumento de <code class="code">require.def()</code> a trav&eacute;s de un arreglo) y luego pasar una funci&oacute;n como tercer argumento. Esta funci&oacute;n ser&aacute; llamada para definir el m&oacute;dulo una vez cargadas todos las dependencias. Dicha funci&oacute;n recibe los valores devueltos por las dependencias como un argumento (en el mismo orden en que son requeridas en el arreglo) y luego la misma debe devolver un objeto que defina el m&oacute;dulo.
+                  Si el modulo posee dependencias, es posible especificarlas en el segundo argumento de <code>require.def()</code> a trav&eacute;s de un arreglo) y luego pasar una funci&oacute;n como tercer argumento. Esta funci&oacute;n ser&aacute; llamada para definir el m&oacute;dulo una vez cargadas todos las dependencias. Dicha funci&oacute;n recibe los valores devueltos por las dependencias como un argumento (en el mismo orden en que son requeridas en el arreglo) y luego la misma debe devolver un objeto que defina el m&oacute;dulo.
                 </p>
                 <div class="example">
                   <p class="title">
@@ -503,7 +482,7 @@ my/inventory.js
 my/shirt.js
 </pre>
                 <p>
-                  La funci&oacute;n que define <code class="code">my/shirt</code> no es llamada hasta que <code class="code">my/cart</code> y <code class="code">my/inventory</code> hayan sido cargadas, y dicha funci&oacute;n recibe como argumentos a los m&oacute;dulos como <code class="code">cart</code> y <code class="code">inventory</code>. El orden de los argumentos de la funci&oacute;n debe coincidir con el orden en que las dependencias se requieren en el arreglo. El objeto devuelto define el m&oacute;dulo <code class="code">my/shirt</code>. Definiendo los m&oacute;dulos de esta forma, my/shirt no existe como un objeto global, ya que m&uacute;ltiples m&oacute;dulos pueden existir en la p&aacute;gina al mismo tiempo.
+                  La funci&oacute;n que define <code>my/shirt</code> no es llamada hasta que <code>my/cart</code> y <code>my/inventory</code> hayan sido cargadas, y dicha funci&oacute;n recibe como argumentos a los m&oacute;dulos como <code>cart</code> y <code>inventory</code>. El orden de los argumentos de la funci&oacute;n debe coincidir con el orden en que las dependencias se requieren en el arreglo. El objeto devuelto define el m&oacute;dulo <code>my/shirt</code>. Definiendo los m&oacute;dulos de esta forma, my/shirt no existe como un objeto global, ya que m&uacute;ltiples m&oacute;dulos pueden existir en la p&aacute;gina al mismo tiempo.
                 </p>
                 <p>
                   Los m&oacute;dulos no tienen que devolver un objeto; cualquier tipo de valor es permitido.
@@ -532,11 +511,9 @@ require.def("my/title",
                 </p>
           </div>
           <div title="Optimizar el C&oacute;digo con las Herramientas de RequireJS" class="section">
-            <div class="titlepage">
-              <h3 class="title">
+              <h3>
                 Optimizar el C&oacute;digo con las Herramientas de RequireJS
               </h3>
-            </div>
             <p>
               Una vez incorporado RequireJS para el manejo de dependencias, la optimizaci&oacute;n del c&oacute;digo es muy f&aacute;cil. Descargue el paquete de RequireJS y col&oacute;quelo en cualquier lugar, preferentemente fuera del &aacute;rea de desarrollo web. Para los prop&oacute;sitos de este ejemplo, el paquete de RequireJS esta ubicado en una carpeta paralela al directorio <code class="filename">webapp</code> (la cual contiene la p&aacute;gina HTML y todos los archivos JavaScript de la aplicaci&oacute;n). La estructura de directorios es:
             </p>
@@ -577,7 +554,7 @@ webapp/scripts/jquery.beta.js
               </div>
             </div>
             <p>
-              Para utilizar la herramienta, es necesario tener instalado Java 6. <a href="http://code.google.com/closure/compiler/" class="ulink">Closure Compiler</a> es utilizado para la minificaci&oacute;n del c&oacute;digo (en caso que <code class="code">optimize: "none"</code> est&eacute; comentado).
+              Para utilizar la herramienta, es necesario tener instalado Java 6. <a href="http://code.google.com/closure/compiler/">Closure Compiler</a> es utilizado para la minificaci&oacute;n del c&oacute;digo (en caso que <code>optimize: "none"</code> est&eacute; comentado).
             </p>
             <p>
               Para comenzar a procesar los archivos, abrir una ventana de comandos, dirigirse al directorio webapp/scripts y ejecutar:
@@ -594,15 +571,13 @@ webapp/scripts/jquery.beta.js
             </p>
           </div>
           <div title="Ejercicios" class="section">
-            <h2 class="title">
+            <h2>
               Ejercicios
             </h2>
             <div title="Crear un M&oacute;dulo Portlet" class="section">
-              <div class="titlepage">
-                <h3 class="title">
+                <h3>
                   Crear un M&oacute;dulo Portlet
                 </h3>
-              </div>
               <p>
                 Abra el archivo <code class="filename">/exercises/portlets.html</code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/portlets.js</code>. El ejercicio consiste en crear una funci&oacute;n creadora de portlet que utilice el patr&oacute;n modular, de tal manera que el siguiente c&oacute;digo funcione:
               </p>
@@ -616,7 +591,7 @@ var myPortlet = Portlet({
 myPortlet.$element.appendTo('body');
 </pre>
               <p>
-                Cada portlet deber&aacute; ser un <code class="code">div</code> con un t&iacute;tulo, un &aacute;rea de contenido, un bot&oacute;n para abrir/cerrar el portlet, un bot&oacute;n para removerlo y otro para actualizarlo. El portlet devuelto por la funci&oacute;n deber&aacute; tener la siguiente API p&uacute;blica:
+                Cada portlet deber&aacute; ser un <code>div</code> con un t&iacute;tulo, un &aacute;rea de contenido, un bot&oacute;n para abrir/cerrar el portlet, un bot&oacute;n para removerlo y otro para actualizarlo. El portlet devuelto por la funci&oacute;n deber&aacute; tener la siguiente API p&uacute;blica:
               </p>
               <pre class="brush: js">
 myPortlet.open(); // fuerza a abrir
