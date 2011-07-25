@@ -18,10 +18,10 @@ line-height:1.4em;
 
 #titlepage {
 position:relative;
-height: 1000px;
+margin: 0 0 500px 0;
 }
 
-.titlepage h2.title {
+h2.title {
 font-size:200%;
 }
 
@@ -42,7 +42,7 @@ color:#000;
 display: none;
 }
 
-h1,h2,h3,h4,h5 {
+h1,h2,h3,h4 {
 font-family:Helvetica,Arial, sans-serif;
 }
 
@@ -75,7 +75,7 @@ padding:12px 0 0;
 }
 
 #loe{
-margin: 0 0 600px 0;
+margin: 0 0 500px 0;
 }
 
 #toc a, #loe a{
