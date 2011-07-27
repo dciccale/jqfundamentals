@@ -94,12 +94,12 @@
             </li>
             <li>
               <p>
-                Un editor de textos planos (como <a href="http://notepad-plus-plus.org/download/v5.9.2.html" rel="_blank">Notepad++</a> para Windows, <a href="http://www.icewalkers.com/Linux/Software/56260/gEdit.html" rel="_blank">gedit</a>/<a href="http://linux.softpedia.com/get/Text-Editing-Processing/Others/Kate-2317.shtml" rel="_blank">Kate</a> para Linux &oacute; <a href="http://textmate.en.softonic.com/mac" rel="_blank">TextMate</a> para Mac OS X)
+                Un editor de textos planos (como <a href="http://notepad-plus-plus.org/download/v5.9.2.html" rel="_blank">Notepad++</a> para Windows, <a href="http://www.icewalkers.com/Linux/Software/56260/gEdit.html" rel="_blank">gedit</a>/<a href="http://linux.softpedia.com/get/Text-Editing-Processing/Others/Kate-2317.shtml" rel="_blank">Kate</a> para Linux o <a href="http://textmate.en.softonic.com/mac" rel="_blank">TextMate</a> para Mac OS X)
               </p>
             </li>
             <li>
               <p>
-                Para las secciones dedicadas a Ajax: Un servidor local (como <a href="http://www.wampserver.com/en/download.php" rel="_blank">WAMP</a> o <a href="http://www.mamp.info/en/index.html" rel="_blank">MAMP</a>) &oacute; un cliente FTP/SSH (como <a href="http://filezilla-project.org/" rel="_blank">FileZilla</a>) para acceder a un servidor remoto.
+                Para las secciones dedicadas a Ajax: Un servidor local (como <a href="http://www.wampserver.com/en/download.php" rel="_blank">WAMP</a> o <a href="http://www.mamp.info/en/index.html" rel="_blank">MAMP</a>) o un cliente FTP/SSH (como <a href="http://filezilla-project.org/" rel="_blank">FileZilla</a>) para acceder a un servidor remoto.
               </p>
             </li>
           </ul>
@@ -107,7 +107,7 @@
         <div title="A&ntilde;adir JavaScript a una P&aacute;gina" class="section">
           <h2>A&ntilde;adir JavaScript a una P&aacute;gina</h2>
           <p>
-            Existen dos formas de insertar c&oacute;digo JavaScript dentro de una p&aacute;gina: escribiendo c&oacute;digo en la misma (en ingles inline) &oacute; a trav&eacute;s de un archivo externo utilizando la etiqueta script. El orden en el cual se incluye el c&oacute;digo es importante: un c&oacute;digo que depende de otro debe ser incluido despu&eacute;s del que referencia (Ejemplo: Si la funci&oacute;n B depende de A, el orden debe ser A,B y no B,A).
+            Existen dos formas de insertar c&oacute;digo JavaScript dentro de una p&aacute;gina: escribiendo c&oacute;digo en la misma (en ingles inline) o a trav&eacute;s de un archivo externo utilizando la etiqueta script. El orden en el cual se incluye el c&oacute;digo es importante: un c&oacute;digo que depende de otro debe ser incluido despu&eacute;s del que referencia (Ejemplo: Si la funci&oacute;n B depende de A, el orden debe ser A,B y no B,A).
           </p>
           <p>
             Para mejorar el rendimiento de la p&aacute;gina, el c&oacute;digo JavaScript debe ser incluido al final del HTML. Adem&aacute;s, cuando se trabaja en un ambiente de producci&oacute;n con m&uacute;ltiples archivos JavaScript, &eacute;stos deben ser combinados en un solo archivo.
@@ -651,7 +651,7 @@ var foo = bar ? 1 : 0;
                 Declaraci&oacute;n Switch
               </h3>
             <p>
-              En lugar de utilizar una serie de declaraciones if/else/else if/else, a veces puede ser &uacute;til la utilizaci&oacute;n de la declaraci&oacute;n switch. <span class="termdef">[Definici&oacute;n: La declaraci&oacute;n <em class="firstterm">Switch</em> eval&uacute;a el valor de una variable &oacute; expresi&oacute;n, y ejecuta diferentes bloques de c&oacute;digo dependiendo de ese valor.]</span>
+              En lugar de utilizar una serie de declaraciones if/else/else if/else, a veces puede ser &uacute;til la utilizaci&oacute;n de la declaraci&oacute;n switch. <span class="termdef">[Definici&oacute;n: La declaraci&oacute;n <em class="firstterm">Switch</em> eval&uacute;a el valor de una variable o expresi&oacute;n, y ejecuta diferentes bloques de c&oacute;digo dependiendo de ese valor.]</span>
             </p>
             <div class="example">
               <p class="title">
@@ -1143,7 +1143,7 @@ var mySplit = myString.split('');  // [ 'h', 'e', 'l', 'l', 'o' ]
           </div>
           <h2>Objetos</h2>
           <p>
-            Los objetos son elementos que pueden contener cero o m&aacute;s conjuntos de pares de nombres claves y valores asociados a dicho objeto. Los nombres claves pueden ser cualquier palabra &oacute; n&uacute;mero v&aacute;lido. El valor puede ser cualquier tipo de valor: un n&uacute;mero, una cadena, un arreglo, una funci&oacute;n, incluso otro objeto.
+            Los objetos son elementos que pueden contener cero o m&aacute;s conjuntos de pares de nombres claves y valores asociados a dicho objeto. Los nombres claves pueden ser cualquier palabra o n&uacute;mero v&aacute;lido. El valor puede ser cualquier tipo de valor: un n&uacute;mero, una cadena, un arreglo, una funci&oacute;n, incluso otro objeto.
           </p>
           <p>
             <span class="termdef">[Definici&oacute;n: Cuando uno de los valores de un objeto es una funci&oacute;n, &eacute;sta es nombrada como un <em class="firstterm">m&eacute;todo</em> del objeto.]</span> De lo contrario, se los llama <em class="firstterm">propiedades</em>.
@@ -1175,7 +1175,7 @@ console.log(myObject.myName);   // se llama a la propiedad myName, la cual muest
             Nota
           </h3>
           <p>
-            Notar que cuando se crean objetos literales, el nombre de la propiedad puede ser cualquier identificador JavaScript, una cadena de caracteres (encerrada entre comillas) &oacute; un n&uacute;mero:
+            Notar que cuando se crean objetos literales, el nombre de la propiedad puede ser cualquier identificador JavaScript, una cadena de caracteres (encerrada entre comillas) o un n&uacute;mero:
           </p>
           <pre class="brush: js">
 var myObject = {
@@ -1399,7 +1399,7 @@ if (Object.prototype.toString.call(myArray) === '[object Array]') {
           </p>
           <div class="orderedlist">
             <ol class="orderedlist">
-              <li>Si la funci&oacute;n es invocada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/call">Function.call</a> &oacute; <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply">Function.apply</a>, <code>this</code> tendr&aacute; el valor del primer argumento pasado al m&eacute;todo. Si el argumento es nulo (<em>null</em>) &oacute; indefinido (<em>undefined</em>), <code>this</code> har&aacute; referencia el objeto global (el objeto <code>window</code>);
+              <li>Si la funci&oacute;n es invocada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/call">Function.call</a> o <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply">Function.apply</a>, <code>this</code> tendr&aacute; el valor del primer argumento pasado al m&eacute;todo. Si el argumento es nulo (<em>null</em>) o indefinido (<em>undefined</em>), <code>this</code> har&aacute; referencia el objeto global (el objeto <code>window</code>);
               </li>
               <li>Si la funci&oacute;n a invocar es creada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/bind">Function.bind</a>, <code>this</code> ser&aacute; el primer argumento que es pasado a la funci&oacute;n en el momento en que se la crea;
               </li>
@@ -1963,7 +1963,7 @@ var $divs = $('div');
             Nota
           </h3>
           <p>
-			La selecci&oacute;n obtiene s&oacute;lo los elementos que est&aacute;n en la p&aacute;gina cuando se realiz&oacute; dicha acci&oacute;n. Si luego se a&ntilde;aden elementos al documento, ser&aacute; necesario repetir la selecci&oacute;n &oacute; a&ntilde;adir los elementos nuevos a la selecci&oacute;n guardada en la variable. En otras palabras, las selecciones guardadas no se actualizan "m&aacute;gicamente" cuando el DOM de modifica.
+			La selecci&oacute;n obtiene s&oacute;lo los elementos que est&aacute;n en la p&aacute;gina cuando se realiz&oacute; dicha acci&oacute;n. Si luego se a&ntilde;aden elementos al documento, ser&aacute; necesario repetir la selecci&oacute;n o a&ntilde;adir los elementos nuevos a la selecci&oacute;n guardada en la variable. En otras palabras, las selecciones guardadas no se actualizan "m&aacute;gicamente" cuando el DOM de modifica.
           </p>
           </div>
           <div title="Refining &amp; Filtering Selections" class="section">
@@ -2231,7 +2231,7 @@ $('h1').html();
             Nota
           </h3>
           <p>
-            Las propiedades CSS que incluyen como separador un gui&oacute;n del medio, en JavaScript deben ser transformadas a su estilo <em class="firstterm">CamelCase</em>. Por ejemplo, cuando se la utiliza como propiedad de un m&eacute;todo, el estilo CSS <code>font-size</code> deber&aacute; ser expresado como <code>fontSize</code>. Sin embargo, esta regla no es aplicada cuando se pasa el nombre de la propiedad CSS al m&eacute;todo <code>$.fn.css</code> &mdash; en este caso, los dos formatos (en <em class="firstterm">CamelCase</em> &oacute; con el gui&oacute;n del medio) funcionar&aacute;n.
+            Las propiedades CSS que incluyen como separador un gui&oacute;n del medio, en JavaScript deben ser transformadas a su estilo <em class="firstterm">CamelCase</em>. Por ejemplo, cuando se la utiliza como propiedad de un m&eacute;todo, el estilo CSS <code>font-size</code> deber&aacute; ser expresado como <code>fontSize</code>. Sin embargo, esta regla no es aplicada cuando se pasa el nombre de la propiedad CSS al m&eacute;todo <code>$.fn.css</code> &mdash; en este caso, los dos formatos (en <em class="firstterm">CamelCase</em> o con el gui&oacute;n del medio) funcionar&aacute;n.
           </p>
           </div>
           <div class="example">
@@ -2323,7 +2323,7 @@ $('h1').position();      // devuelve un objeto conteniendo informaci&oacute;n so
               Los atributos de los elementos HTML que conforman una aplicaci&oacute;n pueden contener informaci&oacute;n &uacute;til, por eso es importante poder establecer y obtener esa informaci&oacute;n.
             </p>
             <p>
-              El m&eacute;todo <code>$.fn.attr</code> act&uacute;a tanto como m&eacute;todo establecedor como obtenedor. Adem&aacute;s, al igual que el m&eacute;todo <code>$.fn.css</code>, cuando se lo utiliza como m&eacute;todo establecedor, puede aceptar un conjunto de palabra clave-valor &oacute; un objeto conteniendo m&aacute;s conjuntos.
+              El m&eacute;todo <code>$.fn.attr</code> act&uacute;a tanto como m&eacute;todo establecedor como obtenedor. Adem&aacute;s, al igual que el m&eacute;todo <code>$.fn.css</code>, cuando se lo utiliza como m&eacute;todo establecedor, puede aceptar un conjunto de palabra clave-valor o un objeto conteniendo m&aacute;s conjuntos.
             </p>
             <div class="example">
               <p class="title">
@@ -2578,7 +2578,7 @@ $('#myList li:first').clone().appendTo('#myList');
                   Remover elementos
                 </h4>
               <p>
-                Existen dos formas de remover elementos de una p&aacute;gina: Utilizando <code>$.fn.remove</code> &oacute; <code>$.fn.detach</code>. Cuando desee remover de forma permanente al elemento, utilize el m&eacute;todo <code>$.fn.remove</code>. Por otro lado, el m&eacute;todo $.fn.detach tambi&eacute;n remueve el elemento, pero mantiene la informaci&oacute;n y eventos asociados al mismo, siendo &uacute;til en el caso que necesite reinsertar el elemento en el documento.
+                Existen dos formas de remover elementos de una p&aacute;gina: Utilizando <code>$.fn.remove</code> o <code>$.fn.detach</code>. Cuando desee remover de forma permanente al elemento, utilize el m&eacute;todo <code>$.fn.remove</code>. Por otro lado, el m&eacute;todo $.fn.detach tambi&eacute;n remueve el elemento, pero mantiene la informaci&oacute;n y eventos asociados al mismo, siendo &uacute;til en el caso que necesite reinsertar el elemento en el documento.
               </p>
               <div class="note">
               <h3>
@@ -2733,7 +2733,7 @@ $('#myDiv a:first').attr('href', function(idx, href) {
                   Selecciones
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> &oacute; trabaje directamente con Firebug para cumplir los siguientes puntos:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> o trabaje directamente con Firebug para cumplir los siguientes puntos:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -2775,7 +2775,7 @@ $('#myDiv a:first').attr('href', function(idx, href) {
                   Recorrer el DOM
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> &oacute; trabaje directamente con Firebug para cumplir los siguientes puntos:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> o trabaje directamente con Firebug para cumplir los siguientes puntos:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -2812,7 +2812,7 @@ $('#myDiv a:first').attr('href', function(idx, href) {
                   Manipulaci&oacute;n
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> &oacute; trabaje directamente con Firebug para cumplir los siguientes puntos:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> o trabaje directamente con Firebug para cumplir los siguientes puntos:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -2930,7 +2930,7 @@ $.each({ foo : 'bar', baz : 'bim' }, function(k, v) {
                 </dt>
                 <dd>
                   <p>
-                    Devuelve el &iacute;ndice de un valor en un arreglo, &oacute; -1 si el valor no se encuentra en el arreglo.
+                    Devuelve el &iacute;ndice de un valor en un arreglo, o -1 si el valor no se encuentra en el arreglo.
                   </p>
                   <pre class="brush: js">
 var myArray = [ 1, 2, 3, 5 ];
@@ -3169,7 +3169,7 @@ jQuery.noConflict();
               jQuery ofrece m&eacute;todos para la mayor&iacute;a de los eventos &mdash; entre ellos <code>$.fn.click</code>, <code
               class="code">$.fn.focus</code>, <code
               class="code">$.fn.blur</code>, <code
-              class="code">$.fn.change</code>, etc. Estos &uacute;ltimos son formas reducidas del m&eacute;todo <code>$.fn.bind</code> de jQuery. El m&eacute;todo bind es &uacute;til para vincular (en ingl&eacute;s <em>binding</em>) la misma funci&oacute;n de controlador a m&uacute;ltiples eventos, para cuando se desea proveer informaci&oacute;n al controlador de evento, cuando se est&aacute; trabajando con eventos personalizados &oacute; cuando se desea pasar un objeto a m&uacute;ltiples eventos y controladores.
+              class="code">$.fn.change</code>, etc. Estos &uacute;ltimos son formas reducidas del m&eacute;todo <code>$.fn.bind</code> de jQuery. El m&eacute;todo bind es &uacute;til para vincular (en ingl&eacute;s <em>binding</em>) la misma funci&oacute;n de controlador a m&uacute;ltiples eventos, para cuando se desea proveer informaci&oacute;n al controlador de evento, cuando se est&aacute; trabajando con eventos personalizados o cuando se desea pasar un objeto a m&uacute;ltiples eventos y controladores.
             </p>
             <div class="example">
               <p class="title">
@@ -3568,7 +3568,7 @@ $('p.expander').toggle(
                   Crear una "Sugerencia" para una Caja de Ingreso de Texto
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/inputHint.js</code> &oacute; trabaje directamente con Firebug. La tarea a realizar es utilizar el texto del elemento label y aplicar una "sugerencia" en la caja de ingreso de texto. Los pasos ha seguir son los siguientes:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/inputHint.js</code> o trabaje directamente con Firebug. La tarea a realizar es utilizar el texto del elemento label y aplicar una "sugerencia" en la caja de ingreso de texto. Los pasos ha seguir son los siguientes:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -3608,7 +3608,7 @@ $('p.expander').toggle(
                   A&ntilde;adir una Navegaci&oacute;n por Pesta&ntilde;as
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/tabs.js</code> &oacute; trabaje directamente con Firebug. La tarea a realizar es crear una navegaci&oacute;n por pesta&ntilde;as para los dos elementos <em>div.module</em>. Los pasos ha seguir son los siguientes:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/tabs.js</code> o trabaje directamente con Firebug. La tarea a realizar es crear una navegaci&oacute;n por pesta&ntilde;as para los dos elementos <em>div.module</em>. Los pasos ha seguir son los siguientes:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -3947,7 +3947,7 @@ $('h1').show(300).delay(1000).hide(300);
                   Mostrar Texto Oculto
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/blog.js</code>. La tarea es a&ntilde;adir alguna interactividad a la secci&oacute;n blog de la p&aacute;gina:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/blog.js</code>. La tarea es a&ntilde;adir alguna interactividad a la secci&oacute;n blog de la p&aacute;gina:
               </p>
               <ul>
                 <li>
@@ -3970,7 +3970,7 @@ $('h1').show(300).delay(1000).hide(300);
                   Crear un Men&uacute; Desplegable
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/navigation.js</code>. La tarea es poder desplegar los &iacute;tems del men&uacute; superior de la p&aacute;gina:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/navigation.js</code>. La tarea es poder desplegar los &iacute;tems del men&uacute; superior de la p&aacute;gina:
               </p>
               <ul>
                 <li>
@@ -3993,7 +3993,7 @@ $('h1').show(300).delay(1000).hide(300);
                   Crear un Slideshow
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/slideshow.js</code>. La tarea es a&ntilde;adir un slideshow a la p&aacute;gina con JavaScript.
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/slideshow.js</code>. La tarea es a&ntilde;adir un slideshow a la p&aacute;gina con JavaScript.
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -4623,7 +4623,7 @@ $('#loading_indicator')
                   Cargar Contenido Externo
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/load.js</code>. La tarea es cargar el contenido de un art&iacute;culo de blog cuando el usuario haga click en el t&iacute;tulo del &iacute;tem.
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/load.js</code>. La tarea es cargar el contenido de un art&iacute;culo de blog cuando el usuario haga click en el t&iacute;tulo del &iacute;tem.
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -4649,7 +4649,7 @@ var id = '#' + tempArray[1];
                   Cargar Contenido Utilizando JSON
                 </h3>
                <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/specials.js</code>. La tarea es mostrar los detalles del usuario para un d&iacute;a determinado cuando se selecciona desde la lista desplegable.
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejericio utilizando el archivo <code class="filename">/exercises/js/specials.js</code>. La tarea es mostrar los detalles del usuario para un d&iacute;a determinado cuando se selecciona desde la lista desplegable.
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -5324,7 +5324,7 @@ $.widget( "nmk.progressbar", {
                   Escribir una Extensi&oacute;n Para Cambiar el Color de Fondo en Tablas
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/stripe.js</code>. La tarea es escribir una extensi&oacute;n llamada "stripe" la cual podr&aacute; ser llamada desde cualquier elemento table y deber&aacute; cambiar el color de fondo de las filas impares en el cuerpo de la tabla. El color podr&aacute; ser especificado como par&aacute;metro de la extensi&oacute;n.
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/stripe.js</code>. La tarea es escribir una extensi&oacute;n llamada "stripe" la cual podr&aacute; ser llamada desde cualquier elemento table y deber&aacute; cambiar el color de fondo de las filas impares en el cuerpo de la tabla. El color podr&aacute; ser especificado como par&aacute;metro de la extensi&oacute;n.
               </p>
               <pre class="brush: js">
 $('#myTable').stripe('#cccccc');
@@ -5507,7 +5507,7 @@ $('div.data .gonzalez');
 $('.data td.gonzalez');
 </pre>
               <p>
-                Use en lo posible <code>etiqueta.clase</code> del lado derecho de la selecci&oacute;n, y solo <code>etiqueta</code> &oacute; <code>.clase</code> en la parte izquierda.
+                Use en lo posible <code>etiqueta.clase</code> del lado derecho de la selecci&oacute;n, y solo <code>etiqueta</code> o <code>.clase</code> en la parte izquierda.
               </p>
               <p>
                 Evite especificidad excesiva.
@@ -6466,7 +6466,7 @@ $(document).trigger('myCustomEvent', [ 'bim', 'baz' ]);
                 Un Ejemplo de Aplicaci&oacute;n
               </h3>
             <p>
-              Para demostrar el poder de los eventos personalizados, se desarrollar&aacute; una simple herramienta para buscar en <em>Twitter</em>. Dicha herramienta ofrecer&aacute; varias maneras para que el usuario realice una b&uacute;squeda: ingresando el t&eacute;rmino a buscar en una caja de texto &oacute; consultando los "temas de moda" de <em>Twitter</em>.
+              Para demostrar el poder de los eventos personalizados, se desarrollar&aacute; una simple herramienta para buscar en <em>Twitter</em>. Dicha herramienta ofrecer&aacute; varias maneras para que el usuario realice una b&uacute;squeda: ingresando el t&eacute;rmino a buscar en una caja de texto o consultando los "temas de moda" de <em>Twitter</em>.
             </p>
             <p>
               Los resultados de cada t&eacute;rmino se mostrar&aacute;n en un contenedor de resultados; dichos resultados podr&aacute;n expandirse, colapsarse, refrescarse y removerse, ya sea de forma individual o conjunta.

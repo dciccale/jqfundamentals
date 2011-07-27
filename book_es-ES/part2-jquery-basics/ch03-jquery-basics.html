@@ -241,7 +241,7 @@ var $divs = $('div');
             Nota
           </h3>
           <p>
-			La selecci&oacute;n obtiene s&oacute;lo los elementos que est&aacute;n en la p&aacute;gina cuando se realiz&oacute; dicha acci&oacute;n. Si luego se a&ntilde;aden elementos al documento, ser&aacute; necesario repetir la selecci&oacute;n &oacute; a&ntilde;adir los elementos nuevos a la selecci&oacute;n guardada en la variable. En otras palabras, las selecciones guardadas no se actualizan "m&aacute;gicamente" cuando el DOM de modifica.
+			La selecci&oacute;n obtiene s&oacute;lo los elementos que est&aacute;n en la p&aacute;gina cuando se realiz&oacute; dicha acci&oacute;n. Si luego se a&ntilde;aden elementos al documento, ser&aacute; necesario repetir la selecci&oacute;n o a&ntilde;adir los elementos nuevos a la selecci&oacute;n guardada en la variable. En otras palabras, las selecciones guardadas no se actualizan "m&aacute;gicamente" cuando el DOM de modifica.
           </p>
           </div>
           <div title="Refining &amp; Filtering Selections" class="section">
@@ -509,7 +509,7 @@ $('h1').html();
             Nota
           </h3>
           <p>
-            Las propiedades CSS que incluyen como separador un gui&oacute;n del medio, en JavaScript deben ser transformadas a su estilo <em class="firstterm">CamelCase</em>. Por ejemplo, cuando se la utiliza como propiedad de un m&eacute;todo, el estilo CSS <code>font-size</code> deber&aacute; ser expresado como <code>fontSize</code>. Sin embargo, esta regla no es aplicada cuando se pasa el nombre de la propiedad CSS al m&eacute;todo <code>$.fn.css</code> &mdash; en este caso, los dos formatos (en <em class="firstterm">CamelCase</em> &oacute; con el gui&oacute;n del medio) funcionar&aacute;n.
+            Las propiedades CSS que incluyen como separador un gui&oacute;n del medio, en JavaScript deben ser transformadas a su estilo <em class="firstterm">CamelCase</em>. Por ejemplo, cuando se la utiliza como propiedad de un m&eacute;todo, el estilo CSS <code>font-size</code> deber&aacute; ser expresado como <code>fontSize</code>. Sin embargo, esta regla no es aplicada cuando se pasa el nombre de la propiedad CSS al m&eacute;todo <code>$.fn.css</code> &mdash; en este caso, los dos formatos (en <em class="firstterm">CamelCase</em> o con el gui&oacute;n del medio) funcionar&aacute;n.
           </p>
           </div>
           <div class="example">
@@ -601,7 +601,7 @@ $('h1').position();      // devuelve un objeto conteniendo informaci&oacute;n so
               Los atributos de los elementos HTML que conforman una aplicaci&oacute;n pueden contener informaci&oacute;n &uacute;til, por eso es importante poder establecer y obtener esa informaci&oacute;n.
             </p>
             <p>
-              El m&eacute;todo <code>$.fn.attr</code> act&uacute;a tanto como m&eacute;todo establecedor como obtenedor. Adem&aacute;s, al igual que el m&eacute;todo <code>$.fn.css</code>, cuando se lo utiliza como m&eacute;todo establecedor, puede aceptar un conjunto de palabra clave-valor &oacute; un objeto conteniendo m&aacute;s conjuntos.
+              El m&eacute;todo <code>$.fn.attr</code> act&uacute;a tanto como m&eacute;todo establecedor como obtenedor. Adem&aacute;s, al igual que el m&eacute;todo <code>$.fn.css</code>, cuando se lo utiliza como m&eacute;todo establecedor, puede aceptar un conjunto de palabra clave-valor o un objeto conteniendo m&aacute;s conjuntos.
             </p>
             <div class="example">
               <p class="title">
@@ -856,7 +856,7 @@ $('#myList li:first').clone().appendTo('#myList');
                   Remover elementos
                 </h4>
               <p>
-                Existen dos formas de remover elementos de una p&aacute;gina: Utilizando <code>$.fn.remove</code> &oacute; <code>$.fn.detach</code>. Cuando desee remover de forma permanente al elemento, utilize el m&eacute;todo <code>$.fn.remove</code>. Por otro lado, el m&eacute;todo $.fn.detach tambi&eacute;n remueve el elemento, pero mantiene la informaci&oacute;n y eventos asociados al mismo, siendo &uacute;til en el caso que necesite reinsertar el elemento en el documento.
+                Existen dos formas de remover elementos de una p&aacute;gina: Utilizando <code>$.fn.remove</code> o <code>$.fn.detach</code>. Cuando desee remover de forma permanente al elemento, utilize el m&eacute;todo <code>$.fn.remove</code>. Por otro lado, el m&eacute;todo $.fn.detach tambi&eacute;n remueve el elemento, pero mantiene la informaci&oacute;n y eventos asociados al mismo, siendo &uacute;til en el caso que necesite reinsertar el elemento en el documento.
               </p>
               <div class="note">
               <h3>
@@ -1011,7 +1011,7 @@ $('#myDiv a:first').attr('href', function(idx, href) {
                   Selecciones
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> &oacute; trabaje directamente con Firebug para cumplir los siguientes puntos:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> o trabaje directamente con Firebug para cumplir los siguientes puntos:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -1053,7 +1053,7 @@ $('#myDiv a:first').attr('href', function(idx, href) {
                   Recorrer el DOM
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> &oacute; trabaje directamente con Firebug para cumplir los siguientes puntos:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> o trabaje directamente con Firebug para cumplir los siguientes puntos:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
@@ -1090,7 +1090,7 @@ $('#myDiv a:first').attr('href', function(idx, href) {
                   Manipulaci&oacute;n
                 </h3>
               <p>
-                Abra el archivo <code></code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> &oacute; trabaje directamente con Firebug para cumplir los siguientes puntos:
+                Abra el archivo <code class="filename">/exercises/index.html</code> en el navegador. Realice el ejercicio utilizando el archivo <code class="filename">/exercises/js/sandbox.js</code> o trabaje directamente con Firebug para cumplir los siguientes puntos:
               </p>
               <div class="orderedlist">
                 <ol class="orderedlist">
