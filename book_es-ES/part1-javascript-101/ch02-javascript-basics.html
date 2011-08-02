@@ -347,7 +347,7 @@ var foo = bar ? 1 : 0;
                 Declaraci&oacute;n Switch
               </h3>
             <p>
-              En lugar de utilizar una serie de declaraciones if/else/else if/else, a veces puede ser &uacute;til la utilizaci&oacute;n de la declaraci&oacute;n switch. <span class="termdef">[Definici&oacute;n: La declaraci&oacute;n <em class="firstterm">Switch</em> eval&uacute;a el valor de una variable &oacute; expresi&oacute;n, y ejecuta diferentes bloques de c&oacute;digo dependiendo de ese valor.]</span>
+              En lugar de utilizar una serie de declaraciones if/else/else if/else, a veces puede ser &uacute;til la utilizaci&oacute;n de la declaraci&oacute;n switch. <span class="termdef">[Definici&oacute;n: La declaraci&oacute;n <em class="firstterm">Switch</em> eval&uacute;a el valor de una variable o expresi&oacute;n, y ejecuta diferentes bloques de c&oacute;digo dependiendo de ese valor.]</span>
             </p>
             <div class="example">
               <p class="title">
@@ -839,7 +839,7 @@ var mySplit = myString.split('');  // [ 'h', 'e', 'l', 'l', 'o' ]
           </div>
           <h2>Objetos</h2>
           <p>
-            Los objetos son elementos que pueden contener cero o m&aacute;s conjuntos de pares de nombres claves y valores asociados a dicho objeto. Los nombres claves pueden ser cualquier palabra &oacute; n&uacute;mero v&aacute;lido. El valor puede ser cualquier tipo de valor: un n&uacute;mero, una cadena, un arreglo, una funci&oacute;n, incluso otro objeto.
+            Los objetos son elementos que pueden contener cero o m&aacute;s conjuntos de pares de nombres claves y valores asociados a dicho objeto. Los nombres claves pueden ser cualquier palabra o n&uacute;mero v&aacute;lido. El valor puede ser cualquier tipo de valor: un n&uacute;mero, una cadena, un arreglo, una funci&oacute;n, incluso otro objeto.
           </p>
           <p>
             <span class="termdef">[Definici&oacute;n: Cuando uno de los valores de un objeto es una funci&oacute;n, &eacute;sta es nombrada como un <em class="firstterm">m&eacute;todo</em> del objeto.]</span> De lo contrario, se los llama <em class="firstterm">propiedades</em>.
@@ -871,7 +871,7 @@ console.log(myObject.myName);   // se llama a la propiedad myName, la cual muest
             Nota
           </h3>
           <p>
-            Notar que cuando se crean objetos literales, el nombre de la propiedad puede ser cualquier identificador JavaScript, una cadena de caracteres (encerrada entre comillas) &oacute; un n&uacute;mero:
+            Notar que cuando se crean objetos literales, el nombre de la propiedad puede ser cualquier identificador JavaScript, una cadena de caracteres (encerrada entre comillas) o un n&uacute;mero:
           </p>
           <pre class="brush: js">
 var myObject = {
@@ -1095,7 +1095,7 @@ if (Object.prototype.toString.call(myArray) === '[object Array]') {
           </p>
           <div class="orderedlist">
             <ol class="orderedlist">
-              <li>Si la funci&oacute;n es invocada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/call">Function.call</a> &oacute; <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply">Function.apply</a>, <code>this</code> tendr&aacute; el valor del primer argumento pasado al m&eacute;todo. Si el argumento es nulo (<em>null</em>) &oacute; indefinido (<em>undefined</em>), <code>this</code> har&aacute; referencia el objeto global (el objeto <code>window</code>);
+              <li>Si la funci&oacute;n es invocada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/call">Function.call</a> o <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/apply">Function.apply</a>, <code>this</code> tendr&aacute; el valor del primer argumento pasado al m&eacute;todo. Si el argumento es nulo (<em>null</em>) o indefinido (<em>undefined</em>), <code>this</code> har&aacute; referencia el objeto global (el objeto <code>window</code>);
               </li>
               <li>Si la funci&oacute;n a invocar es creada utilizando <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Function/bind">Function.bind</a>, <code>this</code> ser&aacute; el primer argumento que es pasado a la funci&oacute;n en el momento en que se la crea;
               </li>
