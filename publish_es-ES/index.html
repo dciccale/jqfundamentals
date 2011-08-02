@@ -45,7 +45,7 @@
           
 			<p title="Aviso Legal">Bajo licencia <a href="http://creativecommons.org/licenses/by-sa/3.0/us/" rel="_blank">Creative Commons Attribution-Share Alike 3.0 United States</a>.</p>
 			
-			<p><strong>Última actualización del libro:</strong> Julio 2011 (<a href="https://github.com/dzignus/jqfundamentals/commits/master" rel="_blank">ver cambios</a>).</p>
+			<p><strong>Última actualización del libro:</strong> Agosto 2011 (<a href="https://github.com/dzignus/jqfundamentals/commits/master" rel="_blank">ver cambios</a>).</p>
 
 		</div> <!-- end titlepage -->
 
@@ -5698,7 +5698,7 @@ if (({ foo : 1, bar : 1 })[type]) { ... }
               Introducci&oacute;n
             </h2>
             <p>
-              Cuando se emprende la tarea de realizar aplicaciones complejas del lado del cliente, es necesario considerar la forma en que se organizar&aacute; el c&oacute;digo. Este capitulo esta dedicado a analizar algunos patrones de organizaci&oacute;n de c&oacute;digo para utilizar en una aplicaci&oacute;n realizada con jQuery y explorar el sistema de gesti&oacute;n de dependencias de RequireJS.
+              Cuando se emprende la tarea de realizar aplicaciones complejas del lado del cliente, es necesario considerar la forma en que se organizar&aacute; el c&oacute;digo. Este capitulo est&aacute; dedicado a analizar algunos patrones de organizaci&oacute;n de c&oacute;digo para utilizar en una aplicaci&oacute;n realizada con jQuery. Adem&aacute;s se explorar&aacute; el sistema de gesti&oacute;n de dependencias de RequireJS.
             </p>
           </div>
             
@@ -5719,17 +5719,17 @@ if (({ foo : 1, bar : 1 })[type]) { ... }
                 </li>
                 <li>
                   <p>
-                    A pesar de la naturaleza de jQuery, no todas las aplicaciones JavaScript son sobre el DOM y no todas las piezas de funcionalidad tienen la necesidad de tener una representaci&oacute;n en el DOM.
+                    A pesar de la naturaleza de jQuery, no todas las aplicaciones JavaScript trabajan (o tienen la necesidad de poseer una representaci&oacute;n) en el DOM.
                   </p>
                 </li>
                 <li>
                   <p>
-                    Las unidades de funcionalidad deben tener una articulaci&oacute;n flexible (en ingl&eacute;s <a href="http://en.wikipedia.org/wiki/Loose_coupling">loosely coupled</a>) — una unidad de funcionalidad debe ser capaz de existir por si mismo y la comunicaci&oacute;n con otras unidades debe ser a trav&eacute;s de un sistema de mensajes como eventos personalizados o pub/sub. Y siempre que sea posible, mantener alejada la comunicaci&oacute;n directa entre unidades funcionales.
+                    Las unidades de funcionalidad deben tener una articulaci&oacute;n flexible (en ingl&eacute;s <a href="http://en.wikipedia.org/wiki/Loose_coupling">loosely coupled</a>) — es decir, una unidad de funcionalidad debe ser capaz de existir por si misma y la comunicaci&oacute;n con otras unidades debe ser a trav&eacute;s de un sistema de mensajes como los eventos personalizados o pub/sub. Por otro lado, siempre que sea posible, de debe mantener alejada la comunicaci&oacute;n directa entre unidades funcionales.
                   </p>
                 </li>
               </ul>
               <p>
-                El concepto de articulaci&oacute;n flexible puede ser especialmente problem&aacute;tico para desarrolladores que hacen su primera incursi&oacute;n en aplicaciones complejas, por lo que si esta empezando, este consciente de este concepto.
+                El concepto de articulaci&oacute;n flexible puede ser especialmente problem&aacute;tico para desarrolladores que hacen su primera incursi&oacute;n en aplicaciones complejas. Por lo tanto, si usted esta empezando a crear aplicaciones, solamente sea consciente de este concepto.
               </p>
           </div>
           
@@ -5738,7 +5738,10 @@ if (({ foo : 1, bar : 1 })[type]) { ... }
               Encapsulaci&oacute;n
             </h2>
             <p>
-              El primer paso para la organizaci&oacute;n del c&oacute;digo es separar la aplicaci&oacute;n en distintas piezas; aunque a veces, este esfuerzo es suficiente.
+              El primer paso para la organizaci&oacute;n del c&oacute;digo es separar la aplicaci&oacute;n en distintas piezas.
+            </p>
+            <p>
+              Muchas veces, este esfuerzo suele ser suficiente para mantener al c&ooacute;digo en orden.
             </p>
           </div>
            
@@ -5779,15 +5782,15 @@ myFeature.readSettings(); // registra { foo : 'bar' }
                 </div>
               </div>
               <p>
-                El objeto posee una propiedad y varios m&eacute;todos, los cuales son p&uacute;blicos, por lo que cualquier parte de la aplicaci&oacute;n puede verlos.
+                El objeto posee una propiedad y varios m&eacute;todos, los cuales son p&uacute;blicos (es decir, cualquier parte de la aplicaci&oacute;n puede verlos).
               </p>
               <p>
-                ¿C&oacute;mo es posible aplicar este patr&oacute;n en c&oacute;digo jQuery? Por ejemplo, en el siguiente c&oacute;digo escrito en el estilo tradicional de jQuery:
+                ¿C&oacute;mo se puede aplicar este patr&oacute;n con jQuery? Por ejemplo, en el siguiente c&oacute;digo escrito en el estilo tradicional:
               </p>
               <pre class="brush: js">
-// haciendo click en un item de la lista se carga cierto contenid
-// utilizando el ID de dicho item y a su vez oculta
-// los otros items hermanos
+// haciendo click en un item de la lista se carga cierto contenido,
+// luego utilizando el ID de dicho item se ocultan
+// los items aledaños
 $(document).ready(function() {
   $('#myFeature li')
     .append('&lt;div/&gt;')
@@ -5806,7 +5809,7 @@ $(document).ready(function() {
 });
 </pre>
               <p>
-                Si el ejemplo mostrado representa el 100% de la aplicaci&oacute;n, es conveniente dejarlo como esta. En cambio, si la pieza es solo una parte de una aplicaci&oacute;n m&aacute;s grande, estar&iacute;a bien separar dicha funcionalidad de otras no relacionadas. Por ejemplo, es conveniente mover la URL a la cual se hace la petici&oacute;n fuera del c&oacute;digo y pasarla al &aacute;rea de configuraci&oacute;n. Tambi&eacute;n romper la cadena de m&eacute;todos para hacer luego m&aacute;s f&aacute;cil la modificaci&oacute;n.
+                Si el ejemplo mostrado representa el 100% de la aplicaci&oacute;n, es conveniente dejarlo como esta, ya que no amerita hacer una reestructuraci&oacute;n. En cambio, si la pieza es parte de una aplicaci&oacute;n m&aacute;s grande, estar&iacute;a bien separar dicha funcionalidad de otras no relacionadas. Por ejemplo, es conveniente mover la URL a la cual se hace la petici&oacute;n fuera del c&oacute;digo y pasarla al &aacute;rea de configuraci&oacute;n. Tambi&eacute;n romper la cadena de m&eacute;todos para hacer luego m&aacute;s f&aacute;cil la modificaci&oacute;n.
               </p>
               <div class="example">
                 <p class="title">
@@ -5880,7 +5883,7 @@ $(document).ready(myFeature.init);
                 La primera caracter&iacute;stica a notar es que el c&oacute;digo es m&aacute;s largo que el original — como se dijo anteriormente, si este fuera el alcance de la aplicaci&oacute;n, utilizar un objeto literal seria probablemente una exageraci&oacute;n.
               </p>
               <p>
-              	Las ventajas obtenidas son:
+              	Con la nueva organizaci&ooacute;, las ventajas obtenidas son:
               </p>
               <ul>
                 <li>
